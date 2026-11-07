@@ -1,7 +1,9 @@
 // 中文简介 + 点评：智谱 GLM-4-Flash（免费）。未配置 key 或调用失败时自动降级。
 import { heuristicTag } from './util.js';
+import { cfg } from './config.js';
 
-const API = 'https://open.bigmodel.cn/api/paas/v4/chat/completions';
+// API 地址由 config.llmBaseUrl 决定（默认智谱，可切 DeepSeek 等兼容接口）
+const API = `${(cfg.llmBaseUrl || 'https://open.bigmodel.cn/api/paas/v4').replace(/\/$/, '')}/chat/completions`;
 
 const TAGS = 'AI/Agent、智能体框架、编码助手、插件与Skills、前端开发、后端服务、数据与工具、DevOps工具、移动开发、硬件与机器人、开源好奇货';
 

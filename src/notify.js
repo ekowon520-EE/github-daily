@@ -19,8 +19,13 @@ async function postJSON(url, body) {
 }
 
 async function sendWxPusher(wx, { title, markdown, imageUrl }) {
-  const base = 'https://wxpusher.zjiecode.com/api/send/message';
-  const common = { appToken: wx.appToken, uids: wx.uid ? [wx.uid] : undefined, topicIds: wx.topicIds.length ? wx.topicIds : undefined };
+  // SPT 简推模式（个人推送，无需 appToken）：POST /api/send/message/{SPT}
+  // 应用模式：POST /api/send/message，带 appToken + uids/topicIds
+  const useSpt = Boolean(wx.spt);
+  const base = 'https://wxpusher.zjiecode.com/api/send/message' + (useSpt ? `/${wx.spt}` : '');
+  const common = useSpt
+    ? {}
+    : { appToken: wx.appToken, uids: wx.uid ? [wx.uid] : undefined, topicIds: wx.topicIds.length ? wx.topicIds : undefined };
 
   if (imageUrl) {
     // 图片消息（contentType 3），图片 URL 为仓库 raw 地址（Actions 环境下已先行提交）
@@ -75,7 +80,7 @@ async function sendEmail(mail, { title, markdown, imagePath }) {
 export async function notifyAll(cfg, { title, markdown, imagePath, imageUrl }) {
   const results = [];
   const wx = cfg.wxpusher;
-  if (wx.appToken && (wx.uid || wx.topicIds.length)) {
+  if (wx.spt || (wx.appToken && (wx.uid || wx.topicIds.length))) {
     try { await sendWxPusher(wx, { title, markdown, imageUrl }); results.push('✅ WxPusher'); }
     catch (e) { results.push(`❌ WxPusher: ${e.message}`); }
   } else results.push('⏭ WxPusher 未配置，跳过');
