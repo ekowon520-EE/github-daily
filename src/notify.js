@@ -19,20 +19,23 @@ async function postJSON(url, body) {
 }
 
 async function sendWxPusher(wx, { title, markdown, imageUrl }) {
-  // SPT 简推模式（个人推送，无需 appToken）：POST /api/send/message/{SPT}
-  // 应用模式：POST /api/send/message，带 appToken + uids/topicIds
+  // SPT 极简推送：POST /api/send/message/simple-push，body 带 spt 字段
+  // 应用推送：POST /api/send/message，body 带 appToken + uids/topicIds
+  // contentType：1 文字 / 2 HTML / 3 markdown（WxPusher 无独立图片类型，长图用 HTML img 发）
   const useSpt = Boolean(wx.spt);
-  const base = 'https://wxpusher.zjiecode.com/api/send/message' + (useSpt ? `/${wx.spt}` : '');
-  const common = useSpt
-    ? {}
+  const base = useSpt
+    ? 'https://wxpusher.zjiecode.com/api/send/message/simple-push'
+    : 'https://wxpusher.zjiecode.com/api/send/message';
+  const target = useSpt
+    ? { spt: wx.spt }
     : { appToken: wx.appToken, uids: wx.uid ? [wx.uid] : undefined, topicIds: wx.topicIds.length ? wx.topicIds : undefined };
 
   if (imageUrl) {
-    // 图片消息（contentType 3），图片 URL 为仓库 raw 地址（Actions 环境下已先行提交）
-    const r1 = await postJSON(base, { ...common, content: imageUrl, summary: title.slice(0, 100), contentType: 3 });
+    const html = `<div style="text-align:center"><h2>${esc(title)}</h2><img src="${imageUrl}" style="max-width:100%;border-radius:12px"/></div>`;
+    const r1 = await postJSON(base, { ...target, content: html, summary: title.slice(0, 100), contentType: 2 });
     console.log(`WxPusher 图片消息: code=${r1.code} ${r1.msg || ''}`);
   }
-  const r2 = await postJSON(base, { ...common, content: markdown, summary: title.slice(0, 100), contentType: 2 });
+  const r2 = await postJSON(base, { ...target, content: markdown, summary: title.slice(0, 100), contentType: 3 });
   console.log(`WxPusher 文字摘要: code=${r2.code} ${r2.msg || ''}`);
 }
 

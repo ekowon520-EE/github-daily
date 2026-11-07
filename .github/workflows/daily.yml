@@ -31,6 +31,7 @@ jobs:
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
           ZHIPU_MODEL: ${{ vars.ZHIPU_MODEL || 'glm-4-flash' }}
           WXPUSHER_APP_TOKEN: ${{ secrets.WXPUSHER_APP_TOKEN }}
+          WXPUSHER_SPT: ${{ secrets.WXPUSHER_SPT }}
           WXPUSHER_UID: ${{ secrets.WXPUSHER_UID }}
           WXPUSHER_TOPIC_IDS: ${{ secrets.WXPUSHER_TOPIC_IDS }}
           SCT_SENDKEY: ${{ secrets.SCT_SENDKEY }}

@@ -39,6 +39,8 @@ npm start
 
 产物在 `output/latest.png`，双击打开即可预览效果。
 
+重推已有日报（不重新抓取）：`node src/repush.js`（全部通道）或 `node src/repush.js wxpusher`（单通道）。
+
 ## 二、GitHub Actions 部署（正式启用）
 
 1. **建仓库**：GitHub 新建一个 **私有仓库**（如 `github-daily`），把本目录推上去：
@@ -54,7 +56,8 @@ npm start
    | Secret 名称 | 说明 |
    |---|---|
    | `ZHIPU_API_KEY` | 智谱开放平台 API Key（免费申请） |
-   | `WXPUSHER_APP_TOKEN` | WxPusher 应用的 appToken |
+   | `WXPUSHER_SPT` | WxPusher 极简推送码（SPT_ 开头，与 appToken 二选一即可） |
+   | `WXPUSHER_APP_TOKEN` | WxPusher 应用的 appToken（用 SPT 则不用填） |
    | `WXPUSHER_UID` | 你的 UID |
    | `SCT_SENDKEY` | Server酱 SendKey |
    | `SMTP_USER` | 发件邮箱（如 QQ 邮箱地址） |
@@ -70,7 +73,7 @@ npm start
 
 | 服务 | 步骤 | 费用 |
 |---|---|---|
-| **WxPusher** | ① 打开 wxpusher.zjiecode.com 微信扫码登录 ② 「应用管理」→ 创建应用 → 拿到 `appToken` ③ 用微信扫应用的二维码关注 ④ 「用户管理」里看到你的 `UID` | 免费 |
+| **WxPusher** | 最简：客户端/官网「简单推送」页直接复制 `SPT`（SPT_ 开头的极简推送码）；或建应用拿 `appToken` + 关注后得 `UID` | 免费 |
 | **Server酱** | 打开 sct.ftqq.com → 微信扫码登录 → 首页即显示 SendKey → 按提示关注公众号 | 免费版 5 条/天 |
 | **QQ 邮箱授权码** | QQ邮箱网页版 → 设置 → 账户 → 「POP3/IMAP/SMTP」开启服务 → 生成授权码 | 免费 |
 | **智谱 GLM** | open.bigmodel.cn → 注册 → API Keys → 创建复制。`glm-4-flash` 模型免费 | 免费 |
