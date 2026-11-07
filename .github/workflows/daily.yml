@@ -1,0 +1,41 @@
+name: GitHub 每日热榜
+
+on:
+  schedule:
+    - cron: "7 0 * * *" # UTC 00:07 = 北京时间 08:07（Actions 定时可能有几分钟延迟，属正常）
+  workflow_dispatch: # 支持在 Actions 页面手动触发测试
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 安装中文字体（否则截图中文变方块）
+        run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk fonts-noto-color-emoji
+
+      - name: 安装依赖
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: 生成日报并推送
+        run: node src/index.js
+        env:
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          ZHIPU_MODEL: ${{ vars.ZHIPU_MODEL || 'glm-4-flash' }}
+          WXPUSHER_APP_TOKEN: ${{ secrets.WXPUSHER_APP_TOKEN }}
+          WXPUSHER_UID: ${{ secrets.WXPUSHER_UID }}
+          WXPUSHER_TOPIC_IDS: ${{ secrets.WXPUSHER_TOPIC_IDS }}
+          SCT_SENDKEY: ${{ secrets.SCT_SENDKEY }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_TO: ${{ secrets.SMTP_TO }}
+          TOP_N: ${{ vars.TOP_N || '15' }}
