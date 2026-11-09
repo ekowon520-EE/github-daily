@@ -2,7 +2,7 @@ name: GitHub 每日热榜
 
 on:
   schedule:
-    - cron: "7 0 * * *" # UTC 00:07 = 北京时间 08:07（Actions 定时可能有几分钟延迟，属正常）
+    - cron: "23 0 * * *" # UTC 00:23 = 北京时间 08:23（避开 :00-:10 整点高峰，GitHub 高峰期会静默丢弃定时任务）
   workflow_dispatch: # 支持在 Actions 页面手动触发测试
 
 jobs:
