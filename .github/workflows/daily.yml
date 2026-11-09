@@ -29,7 +29,7 @@ jobs:
         run: node src/index.js
         env:
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
-          ZHIPU_MODEL: ${{ vars.ZHIPU_MODEL || 'glm-4-flash' }}
+          ZHIPU_MODEL: ${{ vars.ZHIPU_MODEL || 'glm-4.5-flash' }}
           WXPUSHER_APP_TOKEN: ${{ secrets.WXPUSHER_APP_TOKEN }}
           WXPUSHER_SPT: ${{ secrets.WXPUSHER_SPT }}
           WXPUSHER_UID: ${{ secrets.WXPUSHER_UID }}

@@ -3,7 +3,7 @@ import 'dotenv/config';
 export const cfg = {
   topN: parseInt(process.env.TOP_N || '15', 10),
   zhipuKey: process.env.ZHIPU_API_KEY || '',
-  zhipuModel: process.env.ZHIPU_MODEL || 'glm-4-flash',
+  zhipuModel: process.env.ZHIPU_MODEL || 'glm-4.5-flash',
   // 兼容其他 OpenAI 兼容接口（如 DeepSeek：https://api.deepseek.com）
   llmBaseUrl: process.env.LLM_BASE_URL || 'https://open.bigmodel.cn/api/paas/v4',
   wxpusher: {
