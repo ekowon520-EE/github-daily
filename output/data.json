@@ -1,37 +1,33 @@
 {
   "meta": {
-    "dateStr": "2026.11.08",
-    "timeStr": "10:42",
-    "weekday": "周日",
-    "week": 45,
+    "dateStr": "2026.11.09",
+    "timeStr": "10:07",
+    "weekday": "周一",
+    "week": 46,
     "totals": {
-      "delta": 10433,
-      "stars": 1092693
+      "delta": 7172,
+      "stars": 418517
     },
-    "aiCount": 8,
+    "aiCount": 5,
     "langDist": [
       {
         "lang": "Python",
-        "count": 4
+        "count": 3
       },
       {
         "lang": "TypeScript",
-        "count": 4
-      },
-      {
-        "lang": "Rust",
         "count": 3
       },
       {
         "lang": "Go",
-        "count": 2
-      },
-      {
-        "lang": "JavaScript",
         "count": 1
       },
       {
-        "lang": "Shell",
+        "lang": "Rust",
+        "count": 1
+      },
+      {
+        "lang": "C++",
         "count": 1
       }
     ],
@@ -39,168 +35,102 @@
   },
   "repos": [
     {
-      "fullName": "vercel-labs/agent-browser",
-      "desc": "Browser automation CLI for AI agents",
-      "lang": "Rust",
-      "stars": 46894,
-      "todayStars": 190,
-      "zhDesc": "AI智能体浏览器自动化命令行工具",
-      "comment": "AI智能体自动化利器",
-      "tag": "智能体框架",
-      "quickstart": "自动化AI智能体浏览器，快速上手"
-    },
-    {
-      "fullName": "cloudflare/security-audit-skill",
-      "desc": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-      "lang": "JavaScript",
-      "stars": 65826,
-      "todayStars": 2085,
-      "zhDesc": "多阶段安全审计的编码智能体技能",
-      "comment": "安全审计自动化助手",
-      "tag": "编码助手",
-      "quickstart": "集成安全审计技能，代码智能体助力"
-    },
-    {
-      "fullName": "google/skills",
-      "desc": "Agent Skills for Google products and technologies",
-      "lang": "Python",
-      "stars": 23449,
-      "todayStars": 443,
-      "zhDesc": "Google产品和技术智能体技能",
-      "comment": "Google智能体技能库",
-      "tag": "插件与Skills",
-      "quickstart": "Google智能体技能，快速构建智能应用"
-    },
-    {
-      "fullName": "mattpocock/skills",
-      "desc": "Skills for Real Engineers. Straight from my .agents directory.",
-      "lang": "Shell",
-      "stars": 317782,
-      "todayStars": 1100,
-      "zhDesc": "真实工程师技能库",
-      "comment": "工程师技能库",
-      "tag": "插件与Skills",
-      "quickstart": ""
-    },
-    {
-      "fullName": "anthropics/skills",
-      "desc": "Public repository for Agent Skills",
-      "lang": "Python",
-      "stars": 188849,
-      "todayStars": 390,
-      "zhDesc": "公共智能体技能库",
-      "comment": "公共智能体技能库",
-      "tag": "插件与Skills",
-      "quickstart": ""
-    },
-    {
-      "fullName": "meta/astryx",
-      "desc": "An open source design system that's fully customizable and agent ready",
-      "lang": "TypeScript",
-      "stars": 14606,
-      "todayStars": 96,
-      "zhDesc": "全定制化、智能体准备的开源设计系统",
-      "comment": "定制化设计系统",
-      "tag": "前端开发",
-      "quickstart": ""
-    },
-    {
-      "fullName": "prometheus/prometheus",
-      "desc": "The Prometheus monitoring system and time series database.",
-      "lang": "Go",
-      "stars": 67456,
-      "todayStars": 322,
-      "zhDesc": "Prometheus监控系统及时间序列数据库",
-      "comment": "监控利器",
-      "tag": "后端服务",
-      "quickstart": ""
-    },
-    {
       "fullName": "sherlock-project/sherlock",
       "desc": "Hunt down social media accounts by username across social networks",
       "lang": "Python",
-      "stars": 100648,
-      "todayStars": 1766,
-      "zhDesc": "跨社交网络追踪社交媒体账户",
-      "comment": "社交媒体追踪工具",
+      "stars": 103785,
+      "todayStars": 2373,
+      "zhDesc": "Hunt down social media accounts by username across social networks",
+      "comment": "",
       "tag": "数据与工具",
-      "quickstart": ""
-    },
-    {
-      "fullName": "milind-soni/OpenMausBot",
-      "desc": "Open-source Grok Bot alternative with a virtual machine that bots can use",
-      "lang": "TypeScript",
-      "stars": 17089,
-      "todayStars": 1955,
-      "zhDesc": "虚拟机支持的Grok Bot开源替代品",
-      "comment": "Grok Bot开源替代",
-      "tag": "移动开发",
-      "quickstart": ""
-    },
-    {
-      "fullName": "astral-sh/ruff",
-      "desc": "An extremely fast Python linter and code formatter, written in Rust.",
-      "lang": "Rust",
-      "stars": 50989,
-      "todayStars": 350,
-      "zhDesc": "Rust编写的极快Python代码检查器和格式化工具",
-      "comment": "Rust加速的Python代码检查",
-      "tag": "编码助手",
-      "quickstart": ""
-    },
-    {
-      "fullName": "tailwindlabs/tailwindcss",
-      "desc": "A utility-first CSS framework for rapid UI development.",
-      "lang": "TypeScript",
-      "stars": 98503,
-      "todayStars": 122,
-      "zhDesc": "快速UI开发的实用CSS框架",
-      "comment": "快速UI开发框架",
-      "tag": "前端开发",
-      "quickstart": ""
-    },
-    {
-      "fullName": "mbillow/localthings",
-      "desc": "Control your Samsung appliances from Home Assistant over your home network, with no cloud account.",
-      "lang": "Python",
-      "stars": 1072,
-      "todayStars": 186,
-      "zhDesc": "通过家庭网络控制三星家电",
-      "comment": "家庭网络家电控制",
-      "tag": "DevOps工具",
-      "quickstart": ""
-    },
-    {
-      "fullName": "zed-industries/zed",
-      "desc": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
-      "lang": "Rust",
-      "stars": 94304,
-      "todayStars": 1114,
-      "zhDesc": "高性能、多人协作代码编辑器",
-      "comment": "高性能代码编辑器",
-      "tag": "前端开发",
-      "quickstart": ""
-    },
-    {
-      "fullName": "ranxianglei/billion-context",
-      "desc": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
-      "lang": "TypeScript",
-      "stars": 4652,
-      "todayStars": 191,
-      "zhDesc": "上下文压缩插件，适用于长会话和节省token",
-      "comment": "长会话上下文压缩",
-      "tag": "插件与Skills",
       "quickstart": ""
     },
     {
       "fullName": "dsx-ai-factory/nvke",
       "desc": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
       "lang": "Go",
-      "stars": 574,
-      "todayStars": 123,
-      "zhDesc": "NVIDIA Kubernetes Engine，GPU Kubernetes裸机管理平面",
-      "comment": "GPU Kubernetes管理",
+      "stars": 875,
+      "todayStars": 345,
+      "zhDesc": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+      "comment": "",
+      "tag": "AI/Agent",
+      "quickstart": ""
+    },
+    {
+      "fullName": "milind-soni/OpenMausBot",
+      "desc": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "lang": "TypeScript",
+      "stars": 18358,
+      "todayStars": 1439,
+      "zhDesc": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "comment": "",
+      "tag": "前端开发",
+      "quickstart": ""
+    },
+    {
+      "fullName": "anthropics/claude-quickstarts",
+      "desc": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "lang": "Python",
+      "stars": 19466,
+      "todayStars": 32,
+      "zhDesc": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "comment": "",
+      "tag": "AI/Agent",
+      "quickstart": ""
+    },
+    {
+      "fullName": "vercel-labs/agent-browser",
+      "desc": "Browser automation CLI for AI agents",
+      "lang": "Rust",
+      "stars": 47675,
+      "todayStars": 815,
+      "zhDesc": "Browser automation CLI for AI agents",
+      "comment": "",
+      "tag": "AI/Agent",
+      "quickstart": ""
+    },
+    {
+      "fullName": "meta/astryx",
+      "desc": "An open source design system that's fully customizable and agent ready",
+      "lang": "TypeScript",
+      "stars": 16988,
+      "todayStars": 875,
+      "zhDesc": "An open source design system that's fully customizable and agent ready",
+      "comment": "",
+      "tag": "AI/Agent",
+      "quickstart": ""
+    },
+    {
+      "fullName": "anthropics/skills",
+      "desc": "Public repository for Agent Skills",
+      "lang": "Python",
+      "stars": 189713,
+      "todayStars": 792,
+      "zhDesc": "Public repository for Agent Skills",
+      "comment": "",
+      "tag": "AI/Agent",
+      "quickstart": ""
+    },
+    {
+      "fullName": "google-deepmind/mujoco",
+      "desc": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "lang": "C++",
+      "stars": 16452,
+      "todayStars": 41,
+      "zhDesc": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "comment": "",
       "tag": "后端服务",
+      "quickstart": ""
+    },
+    {
+      "fullName": "ranxianglei/billion-context",
+      "desc": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "lang": "TypeScript",
+      "stars": 5205,
+      "todayStars": 460,
+      "zhDesc": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "comment": "",
+      "tag": "前端开发",
       "quickstart": ""
     }
   ]
