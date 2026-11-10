@@ -68,14 +68,23 @@ npm start
    可选 Variables（同页面 Variables 标签）：`TOP_N`（榜单条数，默认 15）、`ZHIPU_MODEL`（默认 glm-4-flash）。
 
 3. **启用并测试**：仓库 Actions 页 → 选中「GitHub 每日热榜」→ Run workflow 手动跑一次，看日志确认「推送结果」全绿。
-4. **配置本地计划任务作为主触发**（GitHub 的 schedule 触发器会被服务端静默丢弃，本仓库曾 3 天零次生效，不能依赖）。管理员 PowerShell 执行一次：
+4. **配置云端主触发 cron-job.org**（GitHub 自带 schedule 会被服务端静默丢弃、本仓库曾 3 天零次生效，所以用外部定时服务每天调 dispatch API，不依赖电脑开机）：
+   - 登录 GitHub 网页 → Settings → Developer settings → **Fine-grained tokens** → Generate new token：Repository access 选 **Only select repositories → github-daily**；Permissions → Actions → **Read and write**；Expiration 建议选 1 年。生成后复制 `github_pat_` 开头的 token（只此一次机会）
+   - 注册 **cron-job.org**（邮箱注册即可，免费无限制）→ Create Cronjob：
+     - URL：`https://api.github.com/repos/ekowon520-EE/github-daily/actions/workflows/daily.yml/dispatches`
+     - Method：**POST**；Body：`{"ref":"main"}`
+     - Headers 添加：`Authorization: Bearer <你的github_pat_令牌>` 和 `Accept: application/vnd.github+json`
+     - Schedule：每天 **08:03**，时区选 **Asia/Shanghai**
+     - 保存后点 **Check now** 测试一次：Actions 页应出现新 run、手机应收到推送
+     - 建议在 cron-job.org 的 Notifications 里开启失败邮件提醒
+5. **配置本地备用触发**（电脑醒着时多一层保险，与云端触发由防重护栏自动去重）。管理员 PowerShell 执行一次：
    ```powershell
    $action = New-ScheduledTaskAction -Execute "node" -Argument "E:\AI\github-daily\scripts\trigger-daily.mjs" -WorkingDirectory "E:\AI\github-daily"
    $trigger = New-ScheduledTaskTrigger -Daily -At 8:20AM
-   $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Minutes 10)
-   Register-ScheduledTask -TaskName "GitHubDaily-Trigger" -Action $action -Trigger $trigger -Settings $settings -Description "每天 08:20 触发 GitHub 每日热榜（电脑晚开机自动补跑）"
+   $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Minutes 10) -WakeToRun
+   Register-ScheduledTask -TaskName "GitHubDaily-Trigger" -Action $action -Trigger $trigger -Settings $settings -Description "每天 08:20 触发 GitHub 每日热榜（睡眠自动唤醒/晚开机补跑，已推送则自动跳过）"
    ```
-5. 之后每天北京时间 08:20 左右推送；电脑当天没开机时，11:23 左右由 GitHub schedule 兜底补发。触发日志在 `logs/trigger.log`。图片每天会提交到仓库 `output/latest.png`，raw 地址作为 WxPusher/Server酱 图片消息的图床。
+6. 最终推送时间线（多层互备，防重护栏保证当日只推一次）：**08:03 cron-job.org（主）→ 08:20 本地任务（备①）→ 08:43 / 11:23 GitHub schedule（备②③）**。触发日志在 `logs/trigger.log`。图片每天会提交到仓库 `output/latest.png`，raw 地址作为 WxPusher/Server酱 图片消息的图床。
 
 ## 三、各服务开通指引
 
@@ -88,7 +97,7 @@ npm start
 
 ## 四、自定义
 
-- **推送时间**：主触发改 Windows 计划任务「GitHubDaily-Trigger」的时间；兜底 cron 改 `.github/workflows/daily.yml` 里的 `cron: "23 3 * * *"`（UTC，+8 即北京时间）。
+- **推送时间**：主触发改 cron-job.org 任务里的 Schedule 时间；备用 cron 改 `.github/workflows/daily.yml` 顶部两行 `cron`（UTC，+8 即北京时间）；本地备用任务改计划任务「GitHubDaily-Trigger」的时间。注意榜单数据是 UTC 日口径：越早推送"今日新增"星数越少，想要更饱满的数据可把主触发时间往后调（如 09:00）。
 - **榜单条数**：改 `TOP_N`。
 - **样式**：`src/render.js` 里的 CSS（配色、字号、卡片圆角都在注释分块处）。
 - **分类标签**：`src/util.js` 的 `AI_KEYWORDS` / `heuristicTag`，以及 `src/summarize.js` 的 `TAGS` 枚举。

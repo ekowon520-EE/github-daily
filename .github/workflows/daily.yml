@@ -2,9 +2,20 @@ name: GitHub 每日热榜
 
 on:
   schedule:
-    - cron: "23 3 * * *" # UTC 03:23 = 北京时间 11:23。本 cron 只是兜底：主触发是本地 Windows 计划任务 08:20 用 API 触发（GitHub 的 schedule 会被服务端静默丢弃，本仓库曾 3 天零次生效）。电脑全天没开时由这里补发。
-  workflow_dispatch: # 手动触发 / 本地计划任务触发（每日 08:20 由 scripts/trigger-daily.mjs 调用）
+    - cron: "43 0 * * *" # UTC 00:43 = 北京 08:43（免费备用触发①，防重护栏保证不重复推送）
+    - cron: "23 3 * * *" # UTC 03:23 = 北京 11:23（免费备用触发②：前面全部失守时的最后兜底）
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '强制重新生成并推送（忽略当日已存在；日常触发留空即可，防重护栏会自动跳过重复）'
+        type: boolean
+        default: false
 
+# 触发链路（互相独立，任意一个成功即当日有推送，防重护栏保证只推一次）：
+#   主触发：cron-job.org 每日 08:03（北京时间）POST 调 dispatch API —— 纯云端，不依赖电脑开机，
+#           GitHub 自带 schedule 会被服务端静默丢弃（本仓库曾 3 天零次生效），外部 API 触发不受此影响
+#   备用①：本地计划任务 GitHubDaily-Trigger 每日 08:20（电脑醒着时；脚本 scripts/trigger-daily.mjs，带 Clash 自动降级）
+#   备用②③：上面两条 schedule cron（GitHub 不丢任务的话才生效）
 jobs:
   daily:
     runs-on: ubuntu-latest
@@ -13,8 +24,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 防重护栏：schedule 兜底触发时，若今天日报已由主触发生成并提交，直接跳过（避免重复推送）。
-      # 手动触发（workflow_dispatch）不受此限制，仍可用于强制重推。
+      # 防重护栏：当日日报已提交过就跳过（force=true 的手动触发可突破，用于强制重推）。
+      # 注意：有意重推也可以用本地 `node src/repush.js`（直接重发消息，不重新生成）。
       - name: 检查今日日报是否已生成
         id: check
         run: |
@@ -22,29 +33,29 @@ jobs:
           TODAY=$(TZ='Asia/Shanghai' date +%F)
           if git cat-file -e "origin/main:output/daily-${TODAY}.png" 2>/dev/null; then
             echo "exists=true" >> "$GITHUB_OUTPUT"
-            echo "今日日报 daily-${TODAY}.png 已存在，跳过"
+            echo "今日日报 daily-${TODAY}.png 已存在"
           else
             echo "exists=false" >> "$GITHUB_OUTPUT"
             echo "今日日报尚未生成，继续执行"
           fi
 
       - uses: actions/setup-node@v4
-        if: steps.check.outputs.exists != 'true'
+        if: steps.check.outputs.exists != 'true' || github.event.inputs.force == 'true'
         with:
           node-version: 20
 
       - name: 安装中文字体（否则截图中文变方块）
-        if: steps.check.outputs.exists != 'true'
+        if: steps.check.outputs.exists != 'true' || github.event.inputs.force == 'true'
         run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk fonts-noto-color-emoji
 
       - name: 安装依赖
-        if: steps.check.outputs.exists != 'true'
+        if: steps.check.outputs.exists != 'true' || github.event.inputs.force == 'true'
         run: |
           npm ci
           npx playwright install --with-deps chromium
 
       - name: 生成日报并推送
-        if: steps.check.outputs.exists != 'true'
+        if: steps.check.outputs.exists != 'true' || github.event.inputs.force == 'true'
         run: node src/index.js
         env:
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
