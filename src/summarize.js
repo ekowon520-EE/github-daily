@@ -5,7 +5,12 @@ import { heuristicTag } from './util.js';
 import { cfg } from './config.js';
 
 // API 地址由 config.llmBaseUrl 决定（默认智谱，可切 DeepSeek 等兼容接口）
+// 备用端点：Actions 美国机房访问国内大模型 API 跨境链路不稳（2026-11-10 曾 3 连超时），
+// 可配 LLM_FALLBACK_URL + LLM_FALLBACK_KEY（如智谱国际 z.ai、DeepSeek）做端点级故障转移
 const API = `${(cfg.llmBaseUrl || 'https://open.bigmodel.cn/api/paas/v4').replace(/\/$/, '')}/chat/completions`;
+const API_FALLBACK = cfg.llmFallbackUrl
+  ? `${cfg.llmFallbackUrl.replace(/\/$/, '')}/chat/completions`
+  : '';
 
 const TAGS = 'AI/Agent、智能体框架、编码助手、插件与Skills、前端开发、后端服务、数据与工具、DevOps工具、移动开发、硬件与机器人、开源好奇货';
 
@@ -58,32 +63,51 @@ export function extractJSON(text) {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-// 调 GLM 并解析，失败自动重试（重试时追加更严格的 JSON 指令）
-async function callGLM(prompt, cfg) {
+// 单端点内重试：4 次，指数退避（5s/15s/45s），给跨境拥塞窗口留恢复时间
+async function callEndpoint(url, key, model, prompt, cfg) {
+  const timeoutMs = Number(process.env.LLM_TIMEOUT_MS) || 150000;
   let lastErr;
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  for (let attempt = 1; attempt <= 4; attempt++) {
     const hint = attempt === 1 ? '' : `\n\n注意：上一次输出无法解析为合法 JSON，请重新生成并严格遵守 JSON 格式要求。`;
     try {
-      const res = await fetch(API, {
+      const res = await fetch(url, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${cfg.zhipuKey}` },
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` },
         body: JSON.stringify({
-          model: cfg.zhipuModel,
+          model,
           temperature: 0.3,
           messages: [
             { role: 'system', content: '你是严谨的开源项目点评助手，只输出 JSON，不要输出任何其他内容。' },
             { role: 'user', content: prompt + hint },
           ],
         }),
-        signal: AbortSignal.timeout(90000),
+        signal: AbortSignal.timeout(timeoutMs),
       });
-      if (!res.ok) throw new Error(`GLM HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
       const j = await res.json();
       return extractJSON(j.choices?.[0]?.message?.content || '');
     } catch (e) {
       lastErr = e;
-      console.warn(`GLM 第 ${attempt}/3 次调用/解析失败: ${e.message}`);
-      if (attempt < 3) await sleep(2000 * attempt);
+      console.warn(`LLM ${url.split('/chat')[0]} 第 ${attempt}/4 次失败: ${e.message}`);
+      if (attempt < 4) await sleep([5000, 15000, 45000][attempt - 1]);
+    }
+  }
+  throw lastErr;
+}
+
+// 调 GLM 并解析：主端点重试耗尽后，若配置了备用端点则整体再走一轮
+async function callGLM(prompt, cfg) {
+  const endpoints = [{ url: API, key: cfg.zhipuKey }];
+  if (API_FALLBACK && cfg.llmFallbackKey) {
+    endpoints.push({ url: API_FALLBACK, key: cfg.llmFallbackKey });
+  }
+  let lastErr;
+  for (const ep of endpoints) {
+    try {
+      return await callEndpoint(ep.url, ep.key, cfg.zhipuModel, prompt, cfg);
+    } catch (e) {
+      lastErr = e;
+      console.warn(`端点 ${ep.url.split('/chat')[0]} 整体重试耗尽: ${e.message}`);
     }
   }
   throw lastErr;

@@ -6,6 +6,9 @@ export const cfg = {
   zhipuModel: process.env.ZHIPU_MODEL || 'glm-4.5-flash',
   // 兼容其他 OpenAI 兼容接口（如 DeepSeek：https://api.deepseek.com）
   llmBaseUrl: process.env.LLM_BASE_URL || 'https://open.bigmodel.cn/api/paas/v4',
+  // 备用 LLM 端点（如智谱国际 https://api.z.ai/api/paas/v4）：主端点重试耗尽后启用，Actions 跨境不稳时的保险
+  llmFallbackUrl: process.env.LLM_FALLBACK_URL || '',
+  llmFallbackKey: process.env.LLM_FALLBACK_KEY || '',
   wxpusher: {
     appToken: process.env.WXPUSHER_APP_TOKEN || '',
     spt: process.env.WXPUSHER_SPT || '',
