@@ -21,7 +21,8 @@ src/
   markdown.js        # 文字版摘要
   notify.js          # WxPusher / Server酱 / 邮箱 三通道
   index.js           # 主流程
-.github/workflows/daily.yml  # GitHub Actions 定时任务（每天 08:07 北京时间）
+.github/workflows/daily.yml  # 日报主流程（主触发：本地计划任务 08:20；schedule 仅兜底）
+scripts/trigger-daily.mjs     # 本地触发器（Windows 计划任务调用，日志在 logs/trigger.log）
 output/              # 生成的图片与数据（Actions 会提交回仓库当图床）
 ```
 
@@ -67,7 +68,14 @@ npm start
    可选 Variables（同页面 Variables 标签）：`TOP_N`（榜单条数，默认 15）、`ZHIPU_MODEL`（默认 glm-4-flash）。
 
 3. **启用并测试**：仓库 Actions 页 → 选中「GitHub 每日热榜」→ Run workflow 手动跑一次，看日志确认「推送结果」全绿。
-4. 之后每天北京时间 08:07 左右自动推送（Actions 定时器可能有几分钟到半小时的延迟，属正常现象）。图片每天会提交到仓库 `output/latest.png`，raw 地址作为 WxPusher/Server酱 图片消息的图床。
+4. **配置本地计划任务作为主触发**（GitHub 的 schedule 触发器会被服务端静默丢弃，本仓库曾 3 天零次生效，不能依赖）。管理员 PowerShell 执行一次：
+   ```powershell
+   $action = New-ScheduledTaskAction -Execute "node" -Argument "E:\AI\github-daily\scripts\trigger-daily.mjs" -WorkingDirectory "E:\AI\github-daily"
+   $trigger = New-ScheduledTaskTrigger -Daily -At 8:20AM
+   $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Minutes 10)
+   Register-ScheduledTask -TaskName "GitHubDaily-Trigger" -Action $action -Trigger $trigger -Settings $settings -Description "每天 08:20 触发 GitHub 每日热榜（电脑晚开机自动补跑）"
+   ```
+5. 之后每天北京时间 08:20 左右推送；电脑当天没开机时，11:23 左右由 GitHub schedule 兜底补发。触发日志在 `logs/trigger.log`。图片每天会提交到仓库 `output/latest.png`，raw 地址作为 WxPusher/Server酱 图片消息的图床。
 
 ## 三、各服务开通指引
 
@@ -80,7 +88,7 @@ npm start
 
 ## 四、自定义
 
-- **推送时间**：改 `.github/workflows/daily.yml` 里的 `cron: "7 0 * * *"`（UTC 时间，+8 即北京时间）。
+- **推送时间**：主触发改 Windows 计划任务「GitHubDaily-Trigger」的时间；兜底 cron 改 `.github/workflows/daily.yml` 里的 `cron: "23 3 * * *"`（UTC，+8 即北京时间）。
 - **榜单条数**：改 `TOP_N`。
 - **样式**：`src/render.js` 里的 CSS（配色、字号、卡片圆角都在注释分块处）。
 - **分类标签**：`src/util.js` 的 `AI_KEYWORDS` / `heuristicTag`，以及 `src/summarize.js` 的 `TAGS` 枚举。

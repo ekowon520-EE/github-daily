@@ -2,8 +2,8 @@ name: GitHub 每日热榜
 
 on:
   schedule:
-    - cron: "23 0 * * *" # UTC 00:23 = 北京时间 08:23（避开 :00-:10 整点高峰，GitHub 高峰期会静默丢弃定时任务）
-  workflow_dispatch: # 支持在 Actions 页面手动触发测试
+    - cron: "23 3 * * *" # UTC 03:23 = 北京时间 11:23。本 cron 只是兜底：主触发是本地 Windows 计划任务 08:20 用 API 触发（GitHub 的 schedule 会被服务端静默丢弃，本仓库曾 3 天零次生效）。电脑全天没开时由这里补发。
+  workflow_dispatch: # 手动触发 / 本地计划任务触发（每日 08:20 由 scripts/trigger-daily.mjs 调用）
 
 jobs:
   daily:
@@ -13,19 +13,38 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # 防重护栏：schedule 兜底触发时，若今天日报已由主触发生成并提交，直接跳过（避免重复推送）。
+      # 手动触发（workflow_dispatch）不受此限制，仍可用于强制重推。
+      - name: 检查今日日报是否已生成
+        id: check
+        run: |
+          git fetch origin main --quiet
+          TODAY=$(TZ='Asia/Shanghai' date +%F)
+          if git cat-file -e "origin/main:output/daily-${TODAY}.png" 2>/dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "今日日报 daily-${TODAY}.png 已存在，跳过"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "今日日报尚未生成，继续执行"
+          fi
+
       - uses: actions/setup-node@v4
+        if: steps.check.outputs.exists != 'true'
         with:
           node-version: 20
 
       - name: 安装中文字体（否则截图中文变方块）
+        if: steps.check.outputs.exists != 'true'
         run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk fonts-noto-color-emoji
 
       - name: 安装依赖
+        if: steps.check.outputs.exists != 'true'
         run: |
           npm ci
           npx playwright install --with-deps chromium
 
       - name: 生成日报并推送
+        if: steps.check.outputs.exists != 'true'
         run: node src/index.js
         env:
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
