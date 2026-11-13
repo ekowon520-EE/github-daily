@@ -1,218 +1,214 @@
 {
   "meta": {
-    "dateStr": "2026.11.12",
-    "timeStr": "10:52",
-    "weekday": "周四",
+    "dateStr": "2026.11.13",
+    "timeStr": "10:07",
+    "weekday": "周五",
     "week": 46,
     "totals": {
-      "delta": 0,
-      "stars": 118951
+      "delta": 8440,
+      "stars": 720204
     },
-    "aiCount": 8,
+    "aiCount": 11,
     "langDist": [
       {
         "lang": "TypeScript",
+        "count": 5
+      },
+      {
+        "lang": "Python",
         "count": 3
-      },
-      {
-        "lang": "Rust",
-        "count": 2
-      },
-      {
-        "lang": "C++",
-        "count": 2
-      },
-      {
-        "lang": "其他",
-        "count": 2
       },
       {
         "lang": "JavaScript",
         "count": 2
       },
       {
-        "lang": "Swift",
+        "lang": "Shell",
         "count": 1
       },
       {
-        "lang": "Go",
+        "lang": "Objective-C",
         "count": 1
       },
       {
-        "lang": "Kotlin",
+        "lang": "Ruby",
         "count": 1
       },
       {
-        "lang": "C",
+        "lang": "Zig",
+        "count": 1
+      },
+      {
+        "lang": "C++",
         "count": 1
       }
     ],
-    "source": "search-api"
+    "source": "trending"
   },
   "repos": [
     {
-      "fullName": "storytold/craft-anything",
-      "desc": "Craft Anything: understand how any software works, and craft your own.",
-      "lang": "Rust",
-      "stars": 28596,
-      "todayStars": 0,
-      "zhDesc": "理解任何软件工作原理，助你构建自己的软件工具",
-      "comment": "适合想深入理解软件架构的开发者",
-      "tag": "数据与工具",
-      "quickstart": "Rust工具，理解软件架构，助你构建自己的软件"
-    },
-    {
-      "fullName": "deepseek-ai/dsh-superagent-prototype",
-      "desc": "Towards a More Autonomous Agent System",
+      "fullName": "GoogleChrome/modern-web-guidance-src",
+      "desc": "Keep your coding agent up to date with the latest web best practices",
       "lang": "TypeScript",
-      "stars": 22522,
-      "todayStars": 0,
-      "zhDesc": "更自主的智能体系统原型，探索AI代理能力边界",
-      "comment": "适合研究AI自主系统的开发者",
-      "tag": "AI/Agent",
-      "quickstart": "TypeScript自主智能体系统，探索AI代理能力边界"
+      "stars": 3105,
+      "todayStars": 739,
+      "zhDesc": "保持编码代理与最新Web最佳实践同步",
+      "comment": "适合前端开发者更新代码助手知识库",
+      "tag": "编码助手",
+      "quickstart": "Chrome官方Web开发最佳实践指南，帮助开发者保持代码助手更新"
     },
     {
-      "fullName": "zortos293/Lichii",
-      "desc": "VERY experimental Nintendo Switch 2 emulator",
-      "lang": "C++",
-      "stars": 8567,
-      "todayStars": 0,
-      "zhDesc": "实验性任天堂Switch 2模拟器，C++开发中",
-      "comment": "适合游戏模拟器爱好者与开发者",
-      "tag": "硬件与机器人",
-      "quickstart": "实验性Switch 2模拟器，C++开发，游戏爱好者必备"
+      "fullName": "openai/codex-security",
+      "desc": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "lang": "TypeScript",
+      "stars": 12469,
+      "todayStars": 643,
+      "zhDesc": "OpenAI Codex安全漏洞检测与修复工具",
+      "comment": "适合关注代码安全的开发者使用",
+      "tag": "编码助手",
+      "quickstart": "OpenAI官方安全扫描工具，一键检测并修复代码漏洞"
     },
     {
-      "fullName": "Minireel/HGhub",
-      "desc": "YellowFruit third-party client",
-      "lang": "",
-      "stars": 8299,
-      "todayStars": 0,
-      "zhDesc": "YellowFruit第三方客户端，提供增强功能",
-      "comment": "适合需要增强功能的YellowFruit用户",
-      "tag": "开源好奇货",
-      "quickstart": ""
-    },
-    {
-      "fullName": "NotRexed/Hookshot",
-      "desc": "A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2 Remake",
-      "lang": "C++",
-      "stars": 7897,
-      "todayStars": 0,
-      "zhDesc": "《塞尔达传说：时之笛》Switch 2重制版原生重编译",
-      "comment": "适合塞尔达系列粉丝与游戏开发者",
-      "tag": "硬件与机器人",
-      "quickstart": ""
-    },
-    {
-      "fullName": "patch-gg/pixelfx",
-      "desc": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
-      "lang": "JavaScript",
-      "stars": 7011,
-      "todayStars": 0,
-      "zhDesc": "244个像素艺术效果，附带Claude Code技能自定义",
-      "comment": "适合像素艺术创作者与游戏开发者",
-      "tag": "插件与Skills",
-      "quickstart": ""
-    },
-    {
-      "fullName": "huamidev/GestaltX",
-      "desc": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups, and support for 7 languages.",
-      "lang": "Swift",
-      "stars": 6351,
-      "todayStars": 0,
-      "zhDesc": "iOS 27.x MobileGestalt编辑器，支持区域代码调整",
-      "comment": "适合iOS系统定制开发者",
+      "fullName": "nvm-sh/nvm",
+      "desc": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "lang": "Shell",
+      "stars": 96022,
+      "todayStars": 63,
+      "zhDesc": "Node.js版本管理工具，支持多版本切换",
+      "comment": "前端和Node开发者的必备工具",
       "tag": "DevOps工具",
+      "quickstart": "Node版本管理神器，一行命令切换Node版本"
+    },
+    {
+      "fullName": "pookjw/HermesEnabler",
+      "desc": "Enable Hermès Watch Faces on any Apple Watch devices",
+      "lang": "Objective-C",
+      "stars": 1555,
+      "todayStars": 218,
+      "zhDesc": "Apple Watch Hermes表盘启用工具",
+      "comment": "适合想解锁Apple Watch隐藏功能的用户",
+      "tag": "硬件与机器人",
       "quickstart": ""
     },
     {
-      "fullName": "janestreet/agent_skills",
-      "desc": "Agent skills",
-      "lang": "",
-      "stars": 5985,
-      "todayStars": 0,
-      "zhDesc": "智能体技能库，扩展AI代理能力",
-      "comment": "适合AI智能体开发者",
-      "tag": "AI/Agent",
+      "fullName": "we-promise/sure",
+      "desc": "The personal finance app for everyone (by everyone)",
+      "lang": "Ruby",
+      "stars": 13960,
+      "todayStars": 967,
+      "zhDesc": "开源个人理财管理应用",
+      "comment": "适合想管理个人财务的用户",
+      "tag": "数据与工具",
       "quickstart": ""
     },
     {
-      "fullName": "KKKKhazix/agent-autoloop",
-      "desc": "让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。",
+      "fullName": "QwenLM/qwen-code",
+      "desc": "An open-source AI coding agent that lives in your terminal.",
       "lang": "TypeScript",
-      "stars": 4539,
-      "todayStars": 0,
-      "zhDesc": "命令行智能体自动处理任务，无需人工干预",
-      "comment": "适合想解放双手的命令行用户",
-      "tag": "智能体框架",
-      "quickstart": ""
-    },
-    {
-      "fullName": "Lee-xeo/Claude-Cage",
-      "desc": "Cage：为 Claude 特化的轻量化虚拟机，彻底杜绝网络泄露。多平台适配，支持多账号管理、远程部署、移动端操控。",
-      "lang": "Go",
-      "stars": 3478,
-      "todayStars": 0,
-      "zhDesc": "Claude专用轻量虚拟机，防止网络泄露",
-      "comment": "重视隐私的Claude用户必备",
+      "stars": 29845,
+      "todayStars": 151,
+      "zhDesc": "终端内开源AI编程助手",
+      "comment": "适合终端重度用户提升编程效率",
       "tag": "编码助手",
       "quickstart": ""
     },
     {
-      "fullName": "Verlintas/NOIR",
-      "desc": "手机隐私审计：用 adb 扫出 Android 应用的权限、上报端点与数据流向，并给出可回滚的处置。Desktop Android leak audit: permissions, endpoints, data flows, reversible fixes.",
-      "lang": "Kotlin",
-      "stars": 3291,
-      "todayStars": 0,
-      "zhDesc": "Android应用隐私审计工具，扫描权限与数据流向",
-      "comment": "重视隐私的Android用户必备",
+      "fullName": "ashhart/TensorFold",
+      "desc": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "lang": "Zig",
+      "stars": 1954,
+      "todayStars": 54,
+      "zhDesc": "跨平台LLM推理引擎",
+      "comment": "适合AI开发者优化模型推理性能",
+      "tag": "AI/Agent",
+      "quickstart": ""
+    },
+    {
+      "fullName": "nodejs/node",
+      "desc": "Node.js JavaScript runtime ✨🐢🚀✨",
+      "lang": "JavaScript",
+      "stars": 123607,
+      "todayStars": 62,
+      "zhDesc": "JavaScript运行时环境",
+      "comment": "全栈开发者必备工具",
+      "tag": "后端服务",
+      "quickstart": ""
+    },
+    {
+      "fullName": "addyosmani/agent-skills",
+      "desc": "Production-grade engineering skills for AI coding agents.",
+      "lang": "JavaScript",
+      "stars": 116705,
+      "todayStars": 816,
+      "zhDesc": "AI编码代理生产级工程技能库",
+      "comment": "适合提升AI编程助手能力的开发者",
+      "tag": "编码助手",
+      "quickstart": ""
+    },
+    {
+      "fullName": "meta/astryx",
+      "desc": "An open source design system that's fully customizable and agent ready",
+      "lang": "TypeScript",
+      "stars": 26615,
+      "todayStars": 1830,
+      "zhDesc": "可定制且AI友好的设计系统",
+      "comment": "适合需要AI集成的设计师",
+      "tag": "前端开发",
+      "quickstart": ""
+    },
+    {
+      "fullName": "CopilotKit/OpenBot",
+      "desc": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "lang": "TypeScript",
+      "stars": 11651,
+      "todayStars": 298,
+      "zhDesc": "拥有独立计算机的开源AI同事",
+      "comment": "适合需要自动化任务的用户",
+      "tag": "智能体框架",
+      "quickstart": ""
+    },
+    {
+      "fullName": "Alishahryar1/free-claude-code",
+      "desc": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "lang": "Python",
+      "stars": 69340,
+      "todayStars": 415,
+      "zhDesc": "免费使用Claude Code等多种AI编程工具",
+      "comment": "适合想免费使用AI编程工具的开发者",
+      "tag": "编码助手",
+      "quickstart": ""
+    },
+    {
+      "fullName": "ggml-org/llama.cpp",
+      "desc": "LLM inference in C/C++",
+      "lang": "C++",
+      "stars": 134584,
+      "todayStars": 176,
+      "zhDesc": "C/C++实现的LLM推理框架",
+      "comment": "适合AI模型本地化部署的开发者",
+      "tag": "AI/Agent",
+      "quickstart": ""
+    },
+    {
+      "fullName": "ZhuLinsen/daily_stock_analysis",
+      "desc": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "lang": "Python",
+      "stars": 71097,
+      "todayStars": 1294,
+      "zhDesc": "LLM驱动的多市场股票智能分析系统",
+      "comment": "适合需要智能股票分析的用户",
       "tag": "数据与工具",
       "quickstart": ""
     },
     {
-      "fullName": "tangerineturtle1/NX2navi",
-      "desc": "",
-      "lang": "C",
-      "stars": 3290,
-      "todayStars": 0,
-      "zhDesc": "Nintendo Switch 2导航工具，C语言开发",
-      "comment": "适合Switch 2开发者与爱好者",
-      "tag": "硬件与机器人",
-      "quickstart": ""
-    },
-    {
-      "fullName": "elvarofficial/teardown",
-      "desc": "A Claude Code skill that turns any machine into a 3D simulator you can take apart",
-      "lang": "JavaScript",
-      "stars": 3180,
-      "todayStars": 0,
-      "zhDesc": "将任何机器转为可拆卸的3D模拟器",
-      "comment": "适合3D建模与拆解爱好者",
-      "tag": "插件与Skills",
-      "quickstart": ""
-    },
-    {
-      "fullName": "mromidev/claude-animated-shorts",
-      "desc": "Free Claude skill: viral animated story shorts (2D characters in a 3D world) with three.js + Remotion",
-      "lang": "TypeScript",
-      "stars": 2977,
-      "todayStars": 0,
-      "zhDesc": "Claude技能：创建病毒式动画短片，2D角色3D世界",
-      "comment": "适合内容创作者与动画爱好者",
-      "tag": "插件与Skills",
-      "quickstart": ""
-    },
-    {
-      "fullName": "expo/exact",
-      "desc": "Write an app once. It runs natively on the web, macOS, iOS, and Linux, and an AI agent can build it, run it, see it, and test it on every one of them.",
-      "lang": "Rust",
-      "stars": 2968,
-      "todayStars": 0,
-      "zhDesc": "一次编写，多平台原生运行，AI代理可构建测试",
-      "comment": "适合跨平台应用开发者",
-      "tag": "前端开发",
+      "fullName": "homeassistant-ai/ha-mcp",
+      "desc": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "lang": "Python",
+      "stars": 7695,
+      "todayStars": 714,
+      "zhDesc": "Home Assistant的AI自动化配置工具",
+      "comment": "适合智能家居爱好者",
+      "tag": "智能体框架",
       "quickstart": ""
     }
   ]
