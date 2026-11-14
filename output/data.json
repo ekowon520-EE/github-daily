@@ -1,41 +1,37 @@
 {
   "meta": {
-    "dateStr": "2026.11.13",
-    "timeStr": "10:07",
-    "weekday": "周五",
+    "dateStr": "2026.11.14",
+    "timeStr": "08:22",
+    "weekday": "周六",
     "week": 46,
     "totals": {
-      "delta": 8440,
-      "stars": 720204
+      "delta": 6141,
+      "stars": 468325
     },
-    "aiCount": 11,
+    "aiCount": 12,
     "langDist": [
       {
-        "lang": "TypeScript",
+        "lang": "Python",
         "count": 5
       },
       {
-        "lang": "Python",
-        "count": 3
+        "lang": "TypeScript",
+        "count": 4
       },
       {
-        "lang": "JavaScript",
+        "lang": "Go",
         "count": 2
-      },
-      {
-        "lang": "Shell",
-        "count": 1
-      },
-      {
-        "lang": "Objective-C",
-        "count": 1
       },
       {
         "lang": "Ruby",
         "count": 1
       },
       {
-        "lang": "Zig",
+        "lang": "JavaScript",
+        "count": 1
+      },
+      {
+        "lang": "Rust",
         "count": 1
       },
       {
@@ -47,168 +43,168 @@
   },
   "repos": [
     {
+      "fullName": "alibaba/open-code-review",
+      "desc": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "lang": "Go",
+      "stars": 50605,
+      "todayStars": 215,
+      "zhDesc": "阿里巴巴级安全高效的混合架构代码审查工具，结合确定性流水线和LLM智能体",
+      "comment": "适合需要大规模代码审查的企业级开发团队",
+      "tag": "DevOps工具",
+      "quickstart": "阿里巴巴级代码审查工具，结合LLM智能体提供精准行级评论"
+    },
+    {
       "fullName": "GoogleChrome/modern-web-guidance-src",
       "desc": "Keep your coding agent up to date with the latest web best practices",
       "lang": "TypeScript",
-      "stars": 3105,
-      "todayStars": 739,
-      "zhDesc": "保持编码代理与最新Web最佳实践同步",
-      "comment": "适合前端开发者更新代码助手知识库",
-      "tag": "编码助手",
-      "quickstart": "Chrome官方Web开发最佳实践指南，帮助开发者保持代码助手更新"
+      "stars": 4822,
+      "todayStars": 1925,
+      "zhDesc": "谷歌最新Web最佳实践指南，帮助开发者保持编码技能与时俱进",
+      "comment": "适合希望掌握前沿Web开发技术的全栈工程师",
+      "tag": "前端开发",
+      "quickstart": "谷歌官方Web最佳实践指南，助你掌握前沿开发技术"
     },
     {
       "fullName": "openai/codex-security",
       "desc": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
       "lang": "TypeScript",
-      "stars": 12469,
-      "todayStars": 643,
-      "zhDesc": "OpenAI Codex安全漏洞检测与修复工具",
-      "comment": "适合关注代码安全的开发者使用",
+      "stars": 13122,
+      "todayStars": 751,
+      "zhDesc": "OpenAI Codex安全CLI和TypeScript SDK，用于发现、验证和修复安全漏洞",
+      "comment": "重视代码安全性的AI开发者必备工具",
       "tag": "编码助手",
-      "quickstart": "OpenAI官方安全扫描工具，一键检测并修复代码漏洞"
+      "quickstart": "OpenAI官方安全工具，一键检测并修复代码安全漏洞"
     },
     {
-      "fullName": "nvm-sh/nvm",
-      "desc": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "lang": "Shell",
-      "stars": 96022,
-      "todayStars": 63,
-      "zhDesc": "Node.js版本管理工具，支持多版本切换",
-      "comment": "前端和Node开发者的必备工具",
-      "tag": "DevOps工具",
-      "quickstart": "Node版本管理神器，一行命令切换Node版本"
-    },
-    {
-      "fullName": "pookjw/HermesEnabler",
-      "desc": "Enable Hermès Watch Faces on any Apple Watch devices",
-      "lang": "Objective-C",
-      "stars": 1555,
-      "todayStars": 218,
-      "zhDesc": "Apple Watch Hermes表盘启用工具",
-      "comment": "适合想解锁Apple Watch隐藏功能的用户",
-      "tag": "硬件与机器人",
+      "fullName": "ZhuLinsen/daily_stock_analysis",
+      "desc": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "lang": "Python",
+      "stars": 71577,
+      "todayStars": 256,
+      "zhDesc": "LLM驱动的多市场股票智能分析系统，整合行情、新闻与决策看板",
+      "comment": "适合需要自动化股票分析的投资者",
+      "tag": "数据与工具",
       "quickstart": ""
     },
     {
       "fullName": "we-promise/sure",
       "desc": "The personal finance app for everyone (by everyone)",
       "lang": "Ruby",
-      "stars": 13960,
-      "todayStars": 967,
-      "zhDesc": "开源个人理财管理应用",
-      "comment": "适合想管理个人财务的用户",
+      "stars": 14731,
+      "todayStars": 925,
+      "zhDesc": "人人可用的个人财务管理应用，开源协作开发",
+      "comment": "适合需要简单理财工具的普通用户",
       "tag": "数据与工具",
       "quickstart": ""
     },
     {
-      "fullName": "QwenLM/qwen-code",
-      "desc": "An open-source AI coding agent that lives in your terminal.",
+      "fullName": "backnotprop/plannotator",
+      "desc": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "lang": "TypeScript",
-      "stars": 29845,
-      "todayStars": 151,
-      "zhDesc": "终端内开源AI编程助手",
-      "comment": "适合终端重度用户提升编程效率",
-      "tag": "编码助手",
-      "quickstart": ""
-    },
-    {
-      "fullName": "ashhart/TensorFold",
-      "desc": "LLM Inference Engine for Metal, CUDA and Vulkan.",
-      "lang": "Zig",
-      "stars": 1954,
-      "todayStars": 54,
-      "zhDesc": "跨平台LLM推理引擎",
-      "comment": "适合AI开发者优化模型推理性能",
-      "tag": "AI/Agent",
-      "quickstart": ""
-    },
-    {
-      "fullName": "nodejs/node",
-      "desc": "Node.js JavaScript runtime ✨🐢🚀✨",
-      "lang": "JavaScript",
-      "stars": 123607,
-      "todayStars": 62,
-      "zhDesc": "JavaScript运行时环境",
-      "comment": "全栈开发者必备工具",
-      "tag": "后端服务",
-      "quickstart": ""
-    },
-    {
-      "fullName": "addyosmani/agent-skills",
-      "desc": "Production-grade engineering skills for AI coding agents.",
-      "lang": "JavaScript",
-      "stars": 116705,
-      "todayStars": 816,
-      "zhDesc": "AI编码代理生产级工程技能库",
-      "comment": "适合提升AI编程助手能力的开发者",
-      "tag": "编码助手",
-      "quickstart": ""
-    },
-    {
-      "fullName": "meta/astryx",
-      "desc": "An open source design system that's fully customizable and agent ready",
-      "lang": "TypeScript",
-      "stars": 26615,
-      "todayStars": 1830,
-      "zhDesc": "可定制且AI友好的设计系统",
-      "comment": "适合需要AI集成的设计师",
-      "tag": "前端开发",
-      "quickstart": ""
-    },
-    {
-      "fullName": "CopilotKit/OpenBot",
-      "desc": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
-      "lang": "TypeScript",
-      "stars": 11651,
-      "todayStars": 298,
-      "zhDesc": "拥有独立计算机的开源AI同事",
-      "comment": "适合需要自动化任务的用户",
+      "stars": 10445,
+      "todayStars": 108,
+      "zhDesc": "智能体协作工作空间，支持规划、注释、代码审查和一键反馈",
+      "comment": "适合需要与AI智能体协作的开发团队",
       "tag": "智能体框架",
+      "quickstart": ""
+    },
+    {
+      "fullName": "louislam/uptime-kuma",
+      "desc": "A fancy self-hosted monitoring tool",
+      "lang": "JavaScript",
+      "stars": 93855,
+      "todayStars": 71,
+      "zhDesc": "精美的自托管监控工具，提供网站和服务状态监控",
+      "comment": "适合需要轻量级监控方案的开发者",
+      "tag": "DevOps工具",
+      "quickstart": ""
+    },
+    {
+      "fullName": "block/buzz",
+      "desc": "A hive mind communication platform",
+      "lang": "Rust",
+      "stars": 37297,
+      "todayStars": 97,
+      "zhDesc": "蜂群思维通信平台，实现多人实时协作与信息共享",
+      "comment": "适合需要高效团队协作的远程团队",
+      "tag": "数据与工具",
+      "quickstart": ""
+    },
+    {
+      "fullName": "tradermonty/claude-trading-skills",
+      "desc": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "lang": "Python",
+      "stars": 4156,
+      "todayStars": 69,
+      "zhDesc": "Claude Code股票交易技能集，提供市场分析、技术图表和经济日历等功能",
+      "comment": "适合使用Claude进行股票投资的交易者",
+      "tag": "插件与Skills",
+      "quickstart": ""
+    },
+    {
+      "fullName": "tailscale/tailcat",
+      "desc": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+      "lang": "Go",
+      "stars": 9448,
+      "todayStars": 256,
+      "zhDesc": "类似netcat但基于Tailscale数据平面的网络工具，无需控制平面",
+      "comment": "适合需要安全网络连接的开发者",
+      "tag": "DevOps工具",
+      "quickstart": ""
+    },
+    {
+      "fullName": "Likely7/Veyra-NRVideo",
+      "desc": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+      "lang": "C++",
+      "stars": 1615,
+      "todayStars": 256,
+      "zhDesc": "高级Windows视频播放与增强工具，支持DLSS技术提升游戏帧率",
+      "comment": "适合追求高帧率游戏体验的玩家",
+      "tag": "硬件与机器人",
+      "quickstart": ""
+    },
+    {
+      "fullName": "ChromeDevTools/chrome-devtools-mcp",
+      "desc": "Chrome DevTools for coding agents",
+      "lang": "TypeScript",
+      "stars": 55444,
+      "todayStars": 67,
+      "zhDesc": "Chrome开发者工具的编码智能体版本，提供网页调试功能",
+      "comment": "适合使用AI辅助Web开发的开发者",
+      "tag": "前端开发",
       "quickstart": ""
     },
     {
       "fullName": "Alishahryar1/free-claude-code",
       "desc": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
       "lang": "Python",
-      "stars": 69340,
-      "todayStars": 415,
-      "zhDesc": "免费使用Claude Code等多种AI编程工具",
-      "comment": "适合想免费使用AI编程工具的开发者",
+      "stars": 69880,
+      "todayStars": 787,
+      "zhDesc": "免费使用Claude Code等多种AI编码工具，提供1.3B+免费token",
+      "comment": "适合想免费体验AI编码的开发者",
       "tag": "编码助手",
       "quickstart": ""
     },
     {
-      "fullName": "ggml-org/llama.cpp",
-      "desc": "LLM inference in C/C++",
-      "lang": "C++",
-      "stars": 134584,
-      "todayStars": 176,
-      "zhDesc": "C/C++实现的LLM推理框架",
-      "comment": "适合AI模型本地化部署的开发者",
+      "fullName": "NVIDIA/SkillSpector",
+      "desc": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them.",
+      "lang": "Python",
+      "stars": 25895,
+      "todayStars": 190,
+      "zhDesc": "NVIDIA出品的AI技能安全扫描器，检测漏洞和恶意模式",
+      "comment": "重视AI应用安全性的开发者必备工具",
       "tag": "AI/Agent",
       "quickstart": ""
     },
     {
-      "fullName": "ZhuLinsen/daily_stock_analysis",
-      "desc": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "fullName": "kajisho5/ffmpeg-skill",
+      "desc": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
       "lang": "Python",
-      "stars": 71097,
-      "todayStars": 1294,
-      "zhDesc": "LLM驱动的多市场股票智能分析系统",
-      "comment": "适合需要智能股票分析的用户",
-      "tag": "数据与工具",
-      "quickstart": ""
-    },
-    {
-      "fullName": "homeassistant-ai/ha-mcp",
-      "desc": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
-      "lang": "Python",
-      "stars": 7695,
-      "todayStars": 714,
-      "zhDesc": "Home Assistant的AI自动化配置工具",
-      "comment": "适合智能家居爱好者",
-      "tag": "智能体框架",
+      "stars": 5433,
+      "todayStars": 168,
+      "zhDesc": "为AI编码助手设计的本地视频编辑器，集成42个FFmpeg工具",
+      "comment": "适合需要AI辅助视频处理的开发者",
+      "tag": "插件与Skills",
       "quickstart": ""
     }
   ]
