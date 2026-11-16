@@ -1,45 +1,29 @@
 {
   "meta": {
-    "dateStr": "2026.11.15",
-    "timeStr": "08:24",
-    "weekday": "周日",
-    "week": 46,
+    "dateStr": "2026.11.16",
+    "timeStr": "11:08",
+    "weekday": "周一",
+    "week": 47,
     "totals": {
-      "delta": 6393,
-      "stars": 442569
+      "delta": 7119,
+      "stars": 272966
     },
-    "aiCount": 13,
+    "aiCount": 14,
     "langDist": [
       {
         "lang": "TypeScript",
         "count": 6
       },
       {
-        "lang": "Go",
-        "count": 3
-      },
-      {
         "lang": "Python",
-        "count": 1
+        "count": 6
       },
       {
-        "lang": "Zig",
-        "count": 1
-      },
-      {
-        "lang": "JavaScript",
-        "count": 1
-      },
-      {
-        "lang": "Ruby",
-        "count": 1
+        "lang": "Go",
+        "count": 2
       },
       {
         "lang": "C++",
-        "count": 1
-      },
-      {
-        "lang": "Rust",
         "count": 1
       }
     ],
@@ -47,46 +31,57 @@
   },
   "repos": [
     {
+      "fullName": "dream-num/univer",
+      "desc": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "lang": "TypeScript",
+      "stars": 26335,
+      "todayStars": 988,
+      "zhDesc": "基于开源核心的AI办公SDK，支持编辑计算协作，适用于人和AI代理",
+      "comment": "适合需要集成办公功能到产品的开发者",
+      "tag": "AI/Agent",
+      "quickstart": "AI办公SDK，支持编辑计算协作，一句话集成到产品"
+    },
+    {
+      "fullName": "ag-ui-protocol/ag-ui",
+      "desc": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "lang": "TypeScript",
+      "stars": 17998,
+      "todayStars": 355,
+      "zhDesc": "代理-用户交互协议，将AI代理引入前端应用",
+      "comment": "前端开发者集成AI代理的利器",
+      "tag": "AI/Agent",
+      "quickstart": "代理-用户交互协议，一句话将AI代理引入前端"
+    },
+    {
+      "fullName": "google-labs-code/stitch-skills",
+      "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "lang": "TypeScript",
+      "stars": 9377,
+      "todayStars": 247,
+      "zhDesc": "兼容Stitch MCP服务器的代理技能库，支持多种编码代理",
+      "comment": "Claude Code等编码代理的技能扩展库",
+      "tag": "插件与Skills",
+      "quickstart": "Agent技能库，兼容Stitch MCP，一句话扩展编码代理能力"
+    },
+    {
       "fullName": "backnotprop/plannotator",
       "desc": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "lang": "TypeScript",
-      "stars": 11112,
-      "todayStars": 408,
-      "zhDesc": "智能体协作工作空间，支持代码规划、标注、审查和团队反馈一键发送",
-      "comment": "适合需要高效协作AI团队的开发者",
-      "tag": "智能体框架",
-      "quickstart": "AI团队协作工作空间，一键发送反馈给智能体"
-    },
-    {
-      "fullName": "GoogleChrome/modern-web-guidance-src",
-      "desc": "Keep your coding agent up to date with the latest web best practices",
-      "lang": "TypeScript",
-      "stars": 6028,
-      "todayStars": 1231,
-      "zhDesc": "最新Web最佳实践指南，帮助开发者保持编码助手知识更新",
-      "comment": "适合想提升AI编码助手Web开发能力的开发者",
-      "tag": "编码助手",
-      "quickstart": "Web最佳实践指南，让AI编码助手保持最新"
-    },
-    {
-      "fullName": "tradermonty/claude-trading-skills",
-      "desc": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
-      "lang": "Python",
-      "stars": 4796,
-      "todayStars": 553,
-      "zhDesc": "Claude Code的股票交易技能库，支持市场分析、图表绘制和经济日历",
-      "comment": "适合股民和交易员使用的AI交易助手",
-      "tag": "插件与Skills",
-      "quickstart": "股票交易技能库，助你分析市场制定策略"
+      "stars": 11941,
+      "todayStars": 866,
+      "zhDesc": "代理工作空间，支持规划注释代码审查和团队协作",
+      "comment": "团队协作管理AI代理的利器",
+      "tag": "AI/Agent",
+      "quickstart": ""
     },
     {
       "fullName": "ChromeDevTools/chrome-devtools-mcp",
       "desc": "Chrome DevTools for coding agents",
       "lang": "TypeScript",
-      "stars": 56293,
-      "todayStars": 664,
-      "zhDesc": "专为编码助手设计的Chrome开发者工具",
-      "comment": "适合需要调试AI编码工具的前端开发者",
+      "stars": 57068,
+      "todayStars": 717,
+      "zhDesc": "专为编码代理设计的Chrome开发者工具",
+      "comment": "前端开发者的AI编码助手工具",
       "tag": "编码助手",
       "quickstart": ""
     },
@@ -94,121 +89,110 @@
       "fullName": "alibaba/open-code-review",
       "desc": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
       "lang": "Go",
-      "stars": 51424,
-      "todayStars": 893,
-      "zhDesc": "阿里巴巴级安全高效的代码审查工具，结合确定性流程和LLM智能体",
-      "comment": "适合企业级代码质量管控",
+      "stars": 52226,
+      "todayStars": 691,
+      "zhDesc": "阿里大规模使用的混合架构代码审查工具，精确行级注释",
+      "comment": "企业级代码审查解决方案",
       "tag": "DevOps工具",
-      "quickstart": ""
-    },
-    {
-      "fullName": "QwenLM/qwen-code",
-      "desc": "An open-source AI coding agent that lives in your terminal.",
-      "lang": "TypeScript",
-      "stars": 30332,
-      "todayStars": 64,
-      "zhDesc": "开源终端AI编码助手，直接在命令行中提供智能编码支持",
-      "comment": "适合喜欢在终端工作的开发者",
-      "tag": "编码助手",
-      "quickstart": ""
-    },
-    {
-      "fullName": "dream-num/univer",
-      "desc": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
-      "lang": "TypeScript",
-      "stars": 24482,
-      "todayStars": 495,
-      "zhDesc": "基于开源核心的AI办公SDK，支持编辑、计算、协作和文件处理",
-      "comment": "适合构建AI办公应用的开发者",
-      "tag": "AI/Agent",
-      "quickstart": ""
-    },
-    {
-      "fullName": "ag-ui-protocol/ag-ui",
-      "desc": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
-      "lang": "TypeScript",
-      "stars": 17359,
-      "todayStars": 9,
-      "zhDesc": "智能体与用户交互协议，将AI助手集成到前端应用中",
-      "comment": "适合需要集成AI助手的前端开发者",
-      "tag": "前端开发",
-      "quickstart": ""
-    },
-    {
-      "fullName": "ashhart/TensorFold",
-      "desc": "LLM Inference Engine for Metal, CUDA and Vulkan.",
-      "lang": "Zig",
-      "stars": 2159,
-      "todayStars": 37,
-      "zhDesc": "支持Metal、CUDA和Vulkan的LLM推理引擎",
-      "comment": "适合高性能AI模型部署的开发者",
-      "tag": "数据与工具",
-      "quickstart": ""
-    },
-    {
-      "fullName": "JuliusBrussee/caveman",
-      "desc": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
-      "lang": "Go",
-      "stars": 120059,
-      "todayStars": 227,
-      "zhDesc": "编码助手代理，通过简化语言减少65%的token使用",
-      "comment": "适合想降低AI编码成本的开发者",
-      "tag": "编码助手",
-      "quickstart": ""
-    },
-    {
-      "fullName": "louislam/uptime-kuma",
-      "desc": "A fancy self-hosted monitoring tool",
-      "lang": "JavaScript",
-      "stars": 94235,
-      "todayStars": 430,
-      "zhDesc": "精美的自托管监控工具，实时监控网站和服务状态",
-      "comment": "适合需要自建监控系统的运维人员",
-      "tag": "DevOps工具",
-      "quickstart": ""
-    },
-    {
-      "fullName": "we-promise/sure",
-      "desc": "The personal finance app for everyone (by everyone)",
-      "lang": "Ruby",
-      "stars": 15296,
-      "todayStars": 659,
-      "zhDesc": "人人可用的个人理财应用，帮助管理个人财务",
-      "comment": "适合个人财务管理需求",
-      "tag": "数据与工具",
       "quickstart": ""
     },
     {
       "fullName": "Tencent/LoopForge",
       "desc": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
       "lang": "Go",
-      "stars": 898,
-      "todayStars": 33,
-      "zhDesc": "自托管编码助手交付工作流，支持CodeBuddy、Codex和Claude Code",
-      "comment": "适合企业级AI编码助手部署",
+      "stars": 1655,
+      "todayStars": 423,
+      "zhDesc": "自托管编码代理交付工作流，支持多种代理编排",
+      "comment": "企业级编码代理部署管理工具",
       "tag": "DevOps工具",
       "quickstart": ""
     },
     {
-      "fullName": "Likely7/Veyra-NRVideo",
-      "desc": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+      "fullName": "ggml-org/ggml",
+      "desc": "Tensor library for machine learning",
       "lang": "C++",
-      "stars": 2246,
-      "todayStars": 420,
-      "zhDesc": "Windows视频播放增强工具，支持DLSS 5和120FPS高帧率",
-      "comment": "适合游戏玩家和视频创作者",
-      "tag": "硬件与机器人",
+      "stars": 15946,
+      "todayStars": 43,
+      "zhDesc": "机器学习的张量库，AI模型开发的基础库",
+      "comment": "AI模型开发的基础库",
+      "tag": "数据与工具",
       "quickstart": ""
     },
     {
-      "fullName": "martin-olivier/airgorah",
-      "desc": "A WiFi security auditing software",
-      "lang": "Rust",
-      "stars": 5850,
-      "todayStars": 270,
-      "zhDesc": "WiFi安全审计软件，检测网络漏洞和安全风险",
-      "comment": "适合网络安全测试人员",
-      "tag": "硬件与机器人",
+      "fullName": "elementalsouls/Claude-BugHunter",
+      "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "lang": "Python",
+      "stars": 6558,
+      "todayStars": 98,
+      "zhDesc": "Claude Code的漏洞检测技能包，包含多种安全工具",
+      "comment": "安全测试人员的Claude Code增强工具",
+      "tag": "插件与Skills",
+      "quickstart": ""
+    },
+    {
+      "fullName": "GoogleChrome/modern-web-guidance-src",
+      "desc": "Keep your coding agent up to date with the latest web best practices",
+      "lang": "TypeScript",
+      "stars": 7297,
+      "todayStars": 1219,
+      "zhDesc": "帮助编码代理掌握最新的Web最佳实践",
+      "comment": "前端开发者的AI助手更新指南",
+      "tag": "前端开发",
+      "quickstart": ""
+    },
+    {
+      "fullName": "tradermonty/claude-trading-skills",
+      "desc": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "lang": "Python",
+      "stars": 5645,
+      "todayStars": 706,
+      "zhDesc": "Claude Code的股票投资技能，市场分析和技术图表",
+      "comment": "股民和交易员的AI投资助手",
+      "tag": "插件与Skills",
+      "quickstart": ""
+    },
+    {
+      "fullName": "NVIDIA/SkillEvaluator",
+      "desc": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "lang": "Python",
+      "stars": 1786,
+      "todayStars": 122,
+      "zhDesc": "多层级AI代理技能评估框架，质量门控和实时评估",
+      "comment": "AI代理技能质量评估工具",
+      "tag": "AI/Agent",
+      "quickstart": ""
+    },
+    {
+      "fullName": "kajisho5/ffmpeg-skill",
+      "desc": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+      "lang": "Python",
+      "stars": 6017,
+      "todayStars": 331,
+      "zhDesc": "编码代理的本地视频编辑器，42个FFmpeg工具",
+      "comment": "视频开发者的AI编码助手",
+      "tag": "插件与Skills",
+      "quickstart": ""
+    },
+    {
+      "fullName": "davila7/claude-code-templates",
+      "desc": "Open-source registry and CLI for Claude Code components: agents, commands, skills, hooks, MCPs, settings and mods",
+      "lang": "Python",
+      "stars": 33768,
+      "todayStars": 174,
+      "zhDesc": "Claude Code组件的开源注册表和CLI工具",
+      "comment": "Claude Code组件管理工具",
+      "tag": "插件与Skills",
+      "quickstart": ""
+    },
+    {
+      "fullName": "andrewyng/openworker",
+      "desc": "",
+      "lang": "Python",
+      "stars": 19349,
+      "todayStars": 139,
+      "zhDesc": "开源工作流工具，支持AI代理任务编排",
+      "comment": "AI代理任务自动化工具",
+      "tag": "AI/Agent",
       "quickstart": ""
     }
   ]
