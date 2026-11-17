@@ -1,76 +1,153 @@
 {
   "meta": {
-    "dateStr": "2026.11.16",
-    "timeStr": "11:08",
-    "weekday": "周一",
+    "dateStr": "2026.11.17",
+    "timeStr": "09:51",
+    "weekday": "周二",
     "week": 47,
     "totals": {
-      "delta": 7119,
-      "stars": 272966
+      "delta": 8921,
+      "stars": 416215
     },
-    "aiCount": 14,
+    "aiCount": 12,
     "langDist": [
-      {
-        "lang": "TypeScript",
-        "count": 6
-      },
       {
         "lang": "Python",
         "count": 6
+      },
+      {
+        "lang": "TypeScript",
+        "count": 5
       },
       {
         "lang": "Go",
         "count": 2
       },
       {
-        "lang": "C++",
-        "count": 1
+        "lang": "JavaScript",
+        "count": 2
       }
     ],
     "source": "trending"
   },
   "repos": [
     {
-      "fullName": "dream-num/univer",
-      "desc": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
-      "lang": "TypeScript",
-      "stars": 26335,
-      "todayStars": 988,
-      "zhDesc": "基于开源核心的AI办公SDK，支持编辑计算协作，适用于人和AI代理",
-      "comment": "适合需要集成办公功能到产品的开发者",
-      "tag": "AI/Agent",
-      "quickstart": "AI办公SDK，支持编辑计算协作，一句话集成到产品"
-    },
-    {
       "fullName": "ag-ui-protocol/ag-ui",
       "desc": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
       "lang": "TypeScript",
-      "stars": 17998,
-      "todayStars": 355,
-      "zhDesc": "代理-用户交互协议，将AI代理引入前端应用",
-      "comment": "前端开发者集成AI代理的利器",
-      "tag": "AI/Agent",
-      "quickstart": "代理-用户交互协议，一句话将AI代理引入前端"
-    },
-    {
-      "fullName": "google-labs-code/stitch-skills",
-      "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
-      "lang": "TypeScript",
-      "stars": 9377,
-      "todayStars": 247,
-      "zhDesc": "兼容Stitch MCP服务器的代理技能库，支持多种编码代理",
-      "comment": "Claude Code等编码代理的技能扩展库",
-      "tag": "插件与Skills",
-      "quickstart": "Agent技能库，兼容Stitch MCP，一句话扩展编码代理能力"
+      "stars": 19052,
+      "todayStars": 791,
+      "zhDesc": "AG-UI协议，将智能体引入前端应用的开发框架",
+      "comment": "适合想在前端集成AI智能体的开发者",
+      "tag": "智能体框架",
+      "quickstart": "AG-UI协议框架，让前端应用轻松集成AI智能体"
     },
     {
       "fullName": "backnotprop/plannotator",
       "desc": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "lang": "TypeScript",
-      "stars": 11941,
-      "todayStars": 866,
-      "zhDesc": "代理工作空间，支持规划注释代码审查和团队协作",
-      "comment": "团队协作管理AI代理的利器",
+      "stars": 12595,
+      "todayStars": 696,
+      "zhDesc": "智能体协作工作空间，支持规划、代码审查和团队反馈",
+      "comment": "适合需要与AI智能体协作的团队",
+      "tag": "AI/Agent",
+      "quickstart": "一站式智能体协作平台，一键反馈提升团队效率"
+    },
+    {
+      "fullName": "dream-num/univer",
+      "desc": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "lang": "TypeScript",
+      "stars": 27819,
+      "todayStars": 1828,
+      "zhDesc": "AI办公SDK，集成编辑、计算、协作和文件处理功能",
+      "comment": "适合想打造AI办公应用的开发者",
+      "tag": "数据与工具",
+      "quickstart": "可扩展的AI办公SDK，快速构建智能办公应用"
+    },
+    {
+      "fullName": "tradermonty/claude-trading-skills",
+      "desc": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "lang": "Python",
+      "stars": 6341,
+      "todayStars": 837,
+      "zhDesc": "Claude Code交易技能，支持市场分析、图表和技术指标",
+      "comment": "适合股票投资者和交易员使用",
+      "tag": "插件与Skills",
+      "quickstart": ""
+    },
+    {
+      "fullName": "getarcaneapp/arcane",
+      "desc": "Modern Docker Management, Designed for Everyone",
+      "lang": "Go",
+      "stars": 8768,
+      "todayStars": 46,
+      "zhDesc": "现代化Docker管理工具，界面简洁易用",
+      "comment": "适合需要简化Docker管理的开发者",
+      "tag": "DevOps工具",
+      "quickstart": ""
+    },
+    {
+      "fullName": "DeanChensj/jiangshan-map",
+      "desc": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
+      "lang": "JavaScript",
+      "stars": 6820,
+      "todayStars": 288,
+      "zhDesc": "中国历史交互地图时间轴，跨越18个朝代",
+      "comment": "适合历史爱好者和教育工作者",
+      "tag": "开源好奇货",
+      "quickstart": ""
+    },
+    {
+      "fullName": "google-labs-code/stitch-skills",
+      "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "lang": "TypeScript",
+      "stars": 9749,
+      "todayStars": 529,
+      "zhDesc": "Agent技能库，兼容多种编码智能体",
+      "comment": "适合需要扩展AI编码能力的开发者",
+      "tag": "插件与Skills",
+      "quickstart": ""
+    },
+    {
+      "fullName": "mvanhorn/last30days-skill",
+      "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "lang": "Python",
+      "stars": 68158,
+      "todayStars": 135,
+      "zhDesc": "AI研究技能，跨平台搜集信息并生成综合摘要",
+      "comment": "适合需要快速了解最新动态的研究者",
+      "tag": "AI/Agent",
+      "quickstart": ""
+    },
+    {
+      "fullName": "NVIDIA/SkillEvaluator",
+      "desc": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "lang": "Python",
+      "stars": 2747,
+      "todayStars": 873,
+      "zhDesc": "多层级AI技能评估框架，包含质量检测和数据集生成",
+      "comment": "适合需要评估AI能力的开发团队",
+      "tag": "AI/Agent",
+      "quickstart": ""
+    },
+    {
+      "fullName": "alibaba/open-code-review",
+      "desc": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "lang": "Go",
+      "stars": 52976,
+      "todayStars": 951,
+      "zhDesc": "阿里巴巴级代码审查工具，结合确定性与LLM智能",
+      "comment": "适合需要高效代码审查的大型团队",
+      "tag": "DevOps工具",
+      "quickstart": ""
+    },
+    {
+      "fullName": "google-research/paper-orchestra",
+      "desc": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "lang": "Python",
+      "stars": 1572,
+      "todayStars": 313,
+      "zhDesc": "多智能体框架，用于自动化AI研究论文撰写",
+      "comment": "适合需要提高论文写作效率的研究者",
       "tag": "AI/Agent",
       "quickstart": ""
     },
@@ -78,120 +155,43 @@
       "fullName": "ChromeDevTools/chrome-devtools-mcp",
       "desc": "Chrome DevTools for coding agents",
       "lang": "TypeScript",
-      "stars": 57068,
-      "todayStars": 717,
-      "zhDesc": "专为编码代理设计的Chrome开发者工具",
-      "comment": "前端开发者的AI编码助手工具",
-      "tag": "编码助手",
-      "quickstart": ""
-    },
-    {
-      "fullName": "alibaba/open-code-review",
-      "desc": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "lang": "Go",
-      "stars": 52226,
-      "todayStars": 691,
-      "zhDesc": "阿里大规模使用的混合架构代码审查工具，精确行级注释",
-      "comment": "企业级代码审查解决方案",
-      "tag": "DevOps工具",
-      "quickstart": ""
-    },
-    {
-      "fullName": "Tencent/LoopForge",
-      "desc": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
-      "lang": "Go",
-      "stars": 1655,
-      "todayStars": 423,
-      "zhDesc": "自托管编码代理交付工作流，支持多种代理编排",
-      "comment": "企业级编码代理部署管理工具",
-      "tag": "DevOps工具",
-      "quickstart": ""
-    },
-    {
-      "fullName": "ggml-org/ggml",
-      "desc": "Tensor library for machine learning",
-      "lang": "C++",
-      "stars": 15946,
-      "todayStars": 43,
-      "zhDesc": "机器学习的张量库，AI模型开发的基础库",
-      "comment": "AI模型开发的基础库",
-      "tag": "数据与工具",
-      "quickstart": ""
-    },
-    {
-      "fullName": "elementalsouls/Claude-BugHunter",
-      "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-      "lang": "Python",
-      "stars": 6558,
-      "todayStars": 98,
-      "zhDesc": "Claude Code的漏洞检测技能包，包含多种安全工具",
-      "comment": "安全测试人员的Claude Code增强工具",
-      "tag": "插件与Skills",
-      "quickstart": ""
-    },
-    {
-      "fullName": "GoogleChrome/modern-web-guidance-src",
-      "desc": "Keep your coding agent up to date with the latest web best practices",
-      "lang": "TypeScript",
-      "stars": 7297,
-      "todayStars": 1219,
-      "zhDesc": "帮助编码代理掌握最新的Web最佳实践",
-      "comment": "前端开发者的AI助手更新指南",
+      "stars": 57707,
+      "todayStars": 841,
+      "zhDesc": "编码智能体的Chrome开发者工具",
+      "comment": "适合前端开发者和Chrome工具用户",
       "tag": "前端开发",
       "quickstart": ""
     },
     {
-      "fullName": "tradermonty/claude-trading-skills",
-      "desc": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
-      "lang": "Python",
-      "stars": 5645,
-      "todayStars": 706,
-      "zhDesc": "Claude Code的股票投资技能，市场分析和技术图表",
-      "comment": "股民和交易员的AI投资助手",
-      "tag": "插件与Skills",
-      "quickstart": ""
-    },
-    {
-      "fullName": "NVIDIA/SkillEvaluator",
-      "desc": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
-      "lang": "Python",
-      "stars": 1786,
-      "todayStars": 122,
-      "zhDesc": "多层级AI代理技能评估框架，质量门控和实时评估",
-      "comment": "AI代理技能质量评估工具",
-      "tag": "AI/Agent",
+      "fullName": "sveltejs/svelte",
+      "desc": "web development for the rest of us",
+      "lang": "JavaScript",
+      "stars": 89015,
+      "todayStars": 115,
+      "zhDesc": "简洁高效的Web前端开发框架",
+      "comment": "适合追求简洁开发的Web开发者",
+      "tag": "前端开发",
       "quickstart": ""
     },
     {
       "fullName": "kajisho5/ffmpeg-skill",
       "desc": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
       "lang": "Python",
-      "stars": 6017,
-      "todayStars": 331,
-      "zhDesc": "编码代理的本地视频编辑器，42个FFmpeg工具",
-      "comment": "视频开发者的AI编码助手",
+      "stars": 6802,
+      "todayStars": 367,
+      "zhDesc": "编码智能体的本地视频编辑器，集成42种FFmpeg工具",
+      "comment": "适合需要视频处理能力的AI开发者",
       "tag": "插件与Skills",
       "quickstart": ""
     },
     {
-      "fullName": "davila7/claude-code-templates",
-      "desc": "Open-source registry and CLI for Claude Code components: agents, commands, skills, hooks, MCPs, settings and mods",
+      "fullName": "ifixai-ai/iFixAi",
+      "desc": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
       "lang": "Python",
-      "stars": 33768,
-      "todayStars": 174,
-      "zhDesc": "Claude Code组件的开源注册表和CLI工具",
-      "comment": "Claude Code组件管理工具",
-      "tag": "插件与Skills",
-      "quickstart": ""
-    },
-    {
-      "fullName": "andrewyng/openworker",
-      "desc": "",
-      "lang": "Python",
-      "stars": 19349,
-      "todayStars": 139,
-      "zhDesc": "开源工作流工具，支持AI代理任务编排",
-      "comment": "AI代理任务自动化工具",
+      "stars": 46094,
+      "todayStars": 311,
+      "zhDesc": "AI智能体独立审计工具，确保行为符合预期",
+      "comment": "适合需要验证AI行为的开发者和企业",
       "tag": "AI/Agent",
       "quickstart": ""
     }
