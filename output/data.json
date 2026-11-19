@@ -1,33 +1,41 @@
 {
   "meta": {
-    "dateStr": "2026.11.18",
-    "timeStr": "10:37",
-    "weekday": "周三",
+    "dateStr": "2026.11.19",
+    "timeStr": "11:52",
+    "weekday": "周四",
     "week": 47,
     "totals": {
-      "delta": 12675,
-      "stars": 1017951
+      "delta": 8149,
+      "stars": 1211667
     },
-    "aiCount": 12,
+    "aiCount": 9,
     "langDist": [
-      {
-        "lang": "TypeScript",
-        "count": 5
-      },
       {
         "lang": "Python",
         "count": 4
       },
       {
-        "lang": "Go",
+        "lang": "TypeScript",
         "count": 3
       },
       {
         "lang": "JavaScript",
-        "count": 2
+        "count": 3
       },
       {
         "lang": "Shell",
+        "count": 2
+      },
+      {
+        "lang": "Go",
+        "count": 1
+      },
+      {
+        "lang": "Rust",
+        "count": 1
+      },
+      {
+        "lang": "C++",
         "count": 1
       }
     ],
@@ -35,156 +43,79 @@
   },
   "repos": [
     {
-      "fullName": "elementalsouls/Claude-BugHunter",
-      "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-      "lang": "Python",
-      "stars": 9459,
-      "todayStars": 1005,
-      "zhDesc": "Claude Code漏洞挖掘技能包，含82个技能和681种报告模式，覆盖24类核心漏洞。",
-      "comment": "适合安全研究员和红队队员的漏洞挖掘工具集。",
+      "fullName": "cursor/plugins",
+      "desc": "Cursor plugin specification and official plugins",
+      "lang": "TypeScript",
+      "stars": 17277,
+      "todayStars": 314,
+      "zhDesc": "Cursor编辑器的插件规范与官方插件集合",
+      "comment": "适合想扩展Cursor功能的开发者",
       "tag": "插件与Skills",
-      "quickstart": "Claude Code漏洞挖掘技能包，82技能+681模式，一键启动红队工作。"
+      "quickstart": "Cursor官方插件规范，扩展编辑器功能"
+    },
+    {
+      "fullName": "HKUDS/CLI-Anything",
+      "desc": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "lang": "Python",
+      "stars": 59891,
+      "todayStars": 389,
+      "zhDesc": "将所有软件转变为智能体原生命令行工具",
+      "comment": "适合想为现有软件添加AI能力的开发者",
+      "tag": "AI/Agent",
+      "quickstart": "CLI-Hub平台，让任何软件都能通过命令行与AI交互"
     },
     {
       "fullName": "mvanhorn/last30days-skill",
       "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
       "lang": "Python",
-      "stars": 69138,
-      "todayStars": 696,
-      "zhDesc": "AI代理技能，跨平台研究主题并生成基于事实的摘要报告。",
-      "comment": "适合需要快速了解热点话题的研究者和分析师。",
-      "tag": "AI/Agent",
-      "quickstart": "跨平台AI研究工具，一键汇总社交媒体热点，生成事实摘要。"
-    },
-    {
-      "fullName": "alibaba/open-code-review",
-      "desc": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "lang": "Go",
-      "stars": 53794,
-      "todayStars": 763,
-      "zhDesc": "阿里巴巴级代码审查工具，结合确定性管道与LLM代理，提供精确行级注释。",
-      "comment": "适合大型企业级代码审查和自动化质量保障。",
-      "tag": "DevOps工具",
-      "quickstart": "阿里巴巴级代码审查工具，管道+LLM代理，精确行级注释。"
-    },
-    {
-      "fullName": "Tencent/LoopForge",
-      "desc": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
-      "lang": "Go",
-      "stars": 3278,
-      "todayStars": 591,
-      "zhDesc": "腾讯自托管工作流平台，协调多种编码代理，支持脚本和人工审批。",
-      "comment": "适合需要统一管理多个编码代理的团队。",
-      "tag": "DevOps工具",
-      "quickstart": ""
-    },
-    {
-      "fullName": "dream-num/univer",
-      "desc": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
-      "lang": "TypeScript",
-      "stars": 28947,
-      "todayStars": 1774,
-      "zhDesc": "AI办公SDK，集成编辑、计算、协作功能，支持人员和AI代理共同使用。",
-      "comment": "适合需要构建智能办公应用的开发者。",
-      "tag": "AI/Agent",
-      "quickstart": ""
+      "stars": 70151,
+      "todayStars": 1059,
+      "zhDesc": "AI智能体技能，跨多平台研究主题并生成综合摘要",
+      "comment": "适合需要快速了解热点话题的研究人员",
+      "tag": "智能体框架",
+      "quickstart": "跨平台研究工具，一键生成热点话题综合摘要"
     },
     {
       "fullName": "getarcaneapp/arcane",
       "desc": "Modern Docker Management, Designed for Everyone",
       "lang": "Go",
-      "stars": 9372,
-      "todayStars": 618,
-      "zhDesc": "现代化Docker管理工具，界面友好，功能全面。",
-      "comment": "适合需要简化Docker管理的开发者和运维人员。",
+      "stars": 9878,
+      "todayStars": 547,
+      "zhDesc": "现代化Docker管理工具，面向所有用户设计",
+      "comment": "适合需要简化Docker操作的开发者",
       "tag": "DevOps工具",
       "quickstart": ""
     },
     {
-      "fullName": "google-labs-code/stitch-skills",
-      "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
-      "lang": "TypeScript",
-      "stars": 10134,
-      "todayStars": 350,
-      "zhDesc": "Google代理技能库，遵循开放标准，兼容多种编码代理。",
-      "comment": "适合需要扩展代理功能的开发者和研究人员。",
-      "tag": "插件与Skills",
-      "quickstart": ""
-    },
-    {
-      "fullName": "cursor/plugins",
-      "desc": "Cursor plugin specification and official plugins",
-      "lang": "TypeScript",
-      "stars": 16921,
-      "todayStars": 201,
-      "zhDesc": "Cursor编辑器官方插件库，提供扩展功能。",
-      "comment": "适合Cursor编辑器用户增强开发体验。",
-      "tag": "编码助手",
-      "quickstart": ""
-    },
-    {
-      "fullName": "obra/superpowers",
-      "desc": "An agentic skills framework & software development methodology that works.",
-      "lang": "Shell",
-      "stars": 319388,
-      "todayStars": 1917,
-      "zhDesc": "代理技能框架与开发方法论，提升软件效率。",
-      "comment": "适合追求高效开发流程的团队和个人。",
-      "tag": "智能体框架",
-      "quickstart": ""
-    },
-    {
-      "fullName": "ag-ui-protocol/ag-ui",
-      "desc": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
-      "lang": "TypeScript",
-      "stars": 20048,
-      "todayStars": 1445,
-      "zhDesc": "代理-用户交互协议，将AI代理集成到前端应用。",
-      "comment": "适合需要在前端中集成AI代理的开发者。",
+      "fullName": "NVIDIA/SkillEvaluator",
+      "desc": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "lang": "Python",
+      "stars": 3805,
+      "todayStars": 312,
+      "zhDesc": "多层级AI智能体技能评估框架，含质量门控与语义检测",
+      "comment": "适合AI模型质量评估的研究人员",
       "tag": "AI/Agent",
       "quickstart": ""
     },
     {
-      "fullName": "backnotprop/plannotator",
-      "desc": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-      "lang": "TypeScript",
-      "stars": 13096,
-      "todayStars": 691,
-      "zhDesc": "代理协作工作空间，支持规划、注释、代码审查和团队协作。",
-      "comment": "适合需要与AI代理紧密协作的开发团队。",
-      "tag": "智能体框架",
+      "fullName": "nvm-sh/nvm",
+      "desc": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "lang": "Shell",
+      "stars": 96167,
+      "todayStars": 237,
+      "zhDesc": "Node版本管理器，支持多版本共存切换",
+      "comment": "适合需要管理多个Node版本的开发者",
+      "tag": "DevOps工具",
       "quickstart": ""
     },
     {
-      "fullName": "sveltejs/svelte",
-      "desc": "web development for the rest of us",
-      "lang": "JavaScript",
-      "stars": 89622,
-      "todayStars": 477,
-      "zhDesc": "简洁高效的Web框架，无需虚拟DOM，直接编译优化。",
-      "comment": "适合追求简洁高效的前端开发者。",
-      "tag": "前端开发",
-      "quickstart": ""
-    },
-    {
-      "fullName": "affaan-m/ECC",
-      "desc": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "lang": "JavaScript",
-      "stars": 305581,
-      "todayStars": 883,
-      "zhDesc": "代理性能优化系统，提升多种编码工具的效率和安全性。",
-      "comment": "适合使用多种AI编码工具的开发者。",
-      "tag": "编码助手",
-      "quickstart": ""
-    },
-    {
-      "fullName": "jingyaogong/minimind",
-      "desc": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
-      "lang": "Python",
-      "stars": 66060,
-      "todayStars": 192,
-      "zhDesc": "快速训练小规模LLM的工具，2小时完成64M参数模型训练。",
-      "comment": "适合想快速体验LLM训练的研究者和开发者。",
+      "fullName": "astral-sh/uv",
+      "desc": "An extremely fast Python package and project manager, written in Rust.",
+      "lang": "Rust",
+      "stars": 92269,
+      "todayStars": 258,
+      "zhDesc": "极速Python包与项目管理器，基于Rust开发",
+      "comment": "适合追求速度的Python开发者",
       "tag": "数据与工具",
       "quickstart": ""
     },
@@ -192,11 +123,88 @@
       "fullName": "google-research/paper-orchestra",
       "desc": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
       "lang": "Python",
-      "stars": 3113,
-      "todayStars": 1072,
-      "zhDesc": "多代理框架，自动化AI研究论文的生成和编辑。",
-      "comment": "适合需要高效产出研究论文的科研人员。",
+      "stars": 4414,
+      "todayStars": 1524,
+      "zhDesc": "多智能体框架，自动化AI研究论文写作",
+      "comment": "适合科研人员快速生成论文初稿",
       "tag": "AI/Agent",
+      "quickstart": ""
+    },
+    {
+      "fullName": "google-labs-code/stitch-skills",
+      "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "lang": "TypeScript",
+      "stars": 10452,
+      "todayStars": 365,
+      "zhDesc": "兼容多种编码智能体的Agent技能库",
+      "comment": "丰富Claude Code等AI编程助手能力",
+      "tag": "插件与Skills",
+      "quickstart": ""
+    },
+    {
+      "fullName": "sveltejs/svelte",
+      "desc": "web development for the rest of us",
+      "lang": "JavaScript",
+      "stars": 89652,
+      "todayStars": 692,
+      "zhDesc": "简洁高效的现代前端开发框架",
+      "comment": "适合追求简洁的Web开发者",
+      "tag": "前端开发",
+      "quickstart": ""
+    },
+    {
+      "fullName": "jquery/jquery",
+      "desc": "jQuery JavaScript Library",
+      "lang": "JavaScript",
+      "stars": 60028,
+      "todayStars": 266,
+      "zhDesc": "经典JavaScript库，简化DOM操作与事件处理",
+      "comment": "适合需要兼容旧项目的开发者",
+      "tag": "前端开发",
+      "quickstart": ""
+    },
+    {
+      "fullName": "appwrite/appwrite",
+      "desc": "The open-source cloud for agents & devs. Including Auth, Databases, Storage, Functions, Messaging, Hosting, Realtime, WAF and more",
+      "lang": "TypeScript",
+      "stars": 58262,
+      "todayStars": 232,
+      "zhDesc": "开源云平台，为智能体与开发者提供全套服务",
+      "comment": "适合需要快速构建应用的开发团队",
+      "tag": "后端服务",
+      "quickstart": ""
+    },
+    {
+      "fullName": "openvinotoolkit/openvino",
+      "desc": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+      "lang": "C++",
+      "stars": 11366,
+      "todayStars": 24,
+      "zhDesc": "开源AI推理优化部署工具包",
+      "comment": "适合AI模型部署优化的工程师",
+      "tag": "数据与工具",
+      "quickstart": ""
+    },
+    {
+      "fullName": "obra/superpowers",
+      "desc": "An agentic skills framework & software development methodology that works.",
+      "lang": "Shell",
+      "stars": 321413,
+      "todayStars": 822,
+      "zhDesc": "实用的智能体技能框架与软件开发方法论",
+      "comment": "适合探索AI辅助开发的新方法",
+      "tag": "智能体框架",
+      "quickstart": ""
+    },
+    {
+      "fullName": "affaan-m/ECC",
+      "desc": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "lang": "JavaScript",
+      "stars": 306642,
+      "todayStars": 1108,
+      "zhDesc": "AI编码助手性能优化系统，增强多种工具能力",
+      "comment": "适合提升AI编程助手效率的开发者",
+      "tag": "编码助手",
       "quickstart": ""
     }
   ]
