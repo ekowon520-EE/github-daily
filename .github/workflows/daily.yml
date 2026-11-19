@@ -12,10 +12,10 @@ on:
         default: false
 
 # 触发链路（互相独立，任意一个成功即当日有推送，防重护栏保证只推一次）：
-#   主触发：cron-job.org 每日 08:03（北京时间）POST 调 dispatch API —— 纯云端，不依赖电脑开机，
-#           GitHub 自带 schedule 会被服务端静默丢弃（本仓库曾 3 天零次生效），外部 API 触发不受此影响
-#   备用①：本地计划任务 GitHubDaily-Trigger 每日 08:20（电脑醒着时；脚本 scripts/trigger-daily.mjs，带 Clash 自动降级）
-#   备用②③：上面两条 schedule cron（GitHub 不丢任务的话才生效）
+#   ①本地计划任务 GitHubDaily-Trigger 每日 08:20/12:20 双触发（电脑醒着时；scripts/trigger-daily.mjs，带 Clash 自动降级）
+#   ②本 workflow 两条 schedule（北京 08:43/11:23，GitHub 会飘移/偶发丢弃）
+#   ③看门狗心跳 watchdog.yml（北京 09:03~17:03 每 2 小时巡检，发现当日未推送即 dispatch 本 workflow 补发，
+#     纯云端不依赖电脑；防重护栏保证不重复推，生成失败也会被下一心跳自动重试）
 jobs:
   daily:
     runs-on: ubuntu-latest
