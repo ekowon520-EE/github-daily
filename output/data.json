@@ -1,41 +1,37 @@
 {
   "meta": {
-    "dateStr": "2026.11.19",
-    "timeStr": "11:52",
-    "weekday": "周四",
+    "dateStr": "2026.11.20",
+    "timeStr": "09:23",
+    "weekday": "周五",
     "week": 47,
     "totals": {
-      "delta": 8149,
-      "stars": 1211667
+      "delta": 8506,
+      "stars": 980936
     },
-    "aiCount": 9,
+    "aiCount": 12,
     "langDist": [
       {
         "lang": "Python",
-        "count": 4
+        "count": 6
       },
       {
         "lang": "TypeScript",
-        "count": 3
-      },
-      {
-        "lang": "JavaScript",
-        "count": 3
+        "count": 4
       },
       {
         "lang": "Shell",
         "count": 2
       },
       {
-        "lang": "Go",
-        "count": 1
-      },
-      {
-        "lang": "Rust",
+        "lang": "C",
         "count": 1
       },
       {
         "lang": "C++",
+        "count": 1
+      },
+      {
+        "lang": "HTML",
         "count": 1
       }
     ],
@@ -43,134 +39,79 @@
   },
   "repos": [
     {
-      "fullName": "cursor/plugins",
-      "desc": "Cursor plugin specification and official plugins",
-      "lang": "TypeScript",
-      "stars": 17277,
-      "todayStars": 314,
-      "zhDesc": "Cursor编辑器的插件规范与官方插件集合",
-      "comment": "适合想扩展Cursor功能的开发者",
+      "fullName": "elementalsouls/Claude-BugHunter",
+      "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "lang": "Python",
+      "stars": 12558,
+      "todayStars": 1349,
+      "zhDesc": "Claude Code漏洞检测技能包，含82项技能和681种漏洞报告模式",
+      "comment": "适合安全研究人员和渗透测试工程师",
       "tag": "插件与Skills",
-      "quickstart": "Cursor官方插件规范，扩展编辑器功能"
+      "quickstart": "Claude Code漏洞检测技能包，82技能+681漏洞模式，一键开启安全测试"
+    },
+    {
+      "fullName": "obra/superpowers",
+      "desc": "An agentic skills framework & software development methodology that works.",
+      "lang": "Shell",
+      "stars": 322095,
+      "todayStars": 2028,
+      "zhDesc": "智能体技能框架与软件开发方法论",
+      "comment": "适合构建智能体应用的开发者",
+      "tag": "智能体框架",
+      "quickstart": "智能体技能框架，让软件开发更智能高效"
     },
     {
       "fullName": "HKUDS/CLI-Anything",
       "desc": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
       "lang": "Python",
-      "stars": 59891,
-      "todayStars": 389,
-      "zhDesc": "将所有软件转变为智能体原生命令行工具",
-      "comment": "适合想为现有软件添加AI能力的开发者",
+      "stars": 60577,
+      "todayStars": 898,
+      "zhDesc": "将所有软件转变为智能体原生界面的CLI工具集",
+      "comment": "适合想给传统软件添加AI能力的开发者",
       "tag": "AI/Agent",
-      "quickstart": "CLI-Hub平台，让任何软件都能通过命令行与AI交互"
+      "quickstart": "一键将任何软件转为智能体原生界面"
     },
     {
-      "fullName": "mvanhorn/last30days-skill",
-      "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "fullName": "jingyaogong/minimind",
+      "desc": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
       "lang": "Python",
-      "stars": 70151,
-      "todayStars": 1059,
-      "zhDesc": "AI智能体技能，跨多平台研究主题并生成综合摘要",
-      "comment": "适合需要快速了解热点话题的研究人员",
-      "tag": "智能体框架",
-      "quickstart": "跨平台研究工具，一键生成热点话题综合摘要"
-    },
-    {
-      "fullName": "getarcaneapp/arcane",
-      "desc": "Modern Docker Management, Designed for Everyone",
-      "lang": "Go",
-      "stars": 9878,
-      "todayStars": 547,
-      "zhDesc": "现代化Docker管理工具，面向所有用户设计",
-      "comment": "适合需要简化Docker操作的开发者",
-      "tag": "DevOps工具",
-      "quickstart": ""
-    },
-    {
-      "fullName": "NVIDIA/SkillEvaluator",
-      "desc": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
-      "lang": "Python",
-      "stars": 3805,
-      "todayStars": 312,
-      "zhDesc": "多层级AI智能体技能评估框架，含质量门控与语义检测",
-      "comment": "适合AI模型质量评估的研究人员",
-      "tag": "AI/Agent",
-      "quickstart": ""
-    },
-    {
-      "fullName": "nvm-sh/nvm",
-      "desc": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "lang": "Shell",
-      "stars": 96167,
-      "todayStars": 237,
-      "zhDesc": "Node版本管理器，支持多版本共存切换",
-      "comment": "适合需要管理多个Node版本的开发者",
-      "tag": "DevOps工具",
-      "quickstart": ""
-    },
-    {
-      "fullName": "astral-sh/uv",
-      "desc": "An extremely fast Python package and project manager, written in Rust.",
-      "lang": "Rust",
-      "stars": 92269,
-      "todayStars": 258,
-      "zhDesc": "极速Python包与项目管理器，基于Rust开发",
-      "comment": "适合追求速度的Python开发者",
+      "stars": 66887,
+      "todayStars": 238,
+      "zhDesc": "两小时从零训练64M大模型的开源工具",
+      "comment": "适合想快速入门大模型训练的开发者",
       "tag": "数据与工具",
       "quickstart": ""
     },
     {
-      "fullName": "google-research/paper-orchestra",
-      "desc": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
-      "lang": "Python",
-      "stars": 4414,
-      "todayStars": 1524,
-      "zhDesc": "多智能体框架，自动化AI研究论文写作",
-      "comment": "适合科研人员快速生成论文初稿",
-      "tag": "AI/Agent",
-      "quickstart": ""
-    },
-    {
-      "fullName": "google-labs-code/stitch-skills",
-      "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "fullName": "cursor/plugins",
+      "desc": "Cursor plugin specification and official plugins",
       "lang": "TypeScript",
-      "stars": 10452,
-      "todayStars": 365,
-      "zhDesc": "兼容多种编码智能体的Agent技能库",
-      "comment": "丰富Claude Code等AI编程助手能力",
+      "stars": 17567,
+      "todayStars": 384,
+      "zhDesc": "Cursor编辑器的插件规范和官方插件集合",
+      "comment": "Cursor开发者的扩展工具库",
       "tag": "插件与Skills",
       "quickstart": ""
     },
     {
-      "fullName": "sveltejs/svelte",
-      "desc": "web development for the rest of us",
-      "lang": "JavaScript",
-      "stars": 89652,
-      "todayStars": 692,
-      "zhDesc": "简洁高效的现代前端开发框架",
-      "comment": "适合追求简洁的Web开发者",
-      "tag": "前端开发",
-      "quickstart": ""
-    },
-    {
-      "fullName": "jquery/jquery",
-      "desc": "jQuery JavaScript Library",
-      "lang": "JavaScript",
-      "stars": 60028,
-      "todayStars": 266,
-      "zhDesc": "经典JavaScript库，简化DOM操作与事件处理",
-      "comment": "适合需要兼容旧项目的开发者",
-      "tag": "前端开发",
-      "quickstart": ""
-    },
-    {
-      "fullName": "appwrite/appwrite",
-      "desc": "The open-source cloud for agents & devs. Including Auth, Databases, Storage, Functions, Messaging, Hosting, Realtime, WAF and more",
+      "fullName": "firecrawl/firecrawl",
+      "desc": "Knowledge infrastructure to make your agents smarter. Search, scrape and 550+ data providers through one API.",
       "lang": "TypeScript",
-      "stars": 58262,
-      "todayStars": 232,
-      "zhDesc": "开源云平台，为智能体与开发者提供全套服务",
-      "comment": "适合需要快速构建应用的开发团队",
+      "stars": 204249,
+      "todayStars": 825,
+      "zhDesc": "通过单一API连接550+数据源，提升智能体知识获取能力",
+      "comment": "适合需要多源数据集成的AI开发者",
+      "tag": "AI/Agent",
+      "quickstart": ""
+    },
+    {
+      "fullName": "nginx/nginx",
+      "desc": "The official NGINX Open Source repository.",
+      "lang": "C",
+      "stars": 32341,
+      "todayStars": 73,
+      "zhDesc": "高性能Web服务器和反向代理的官方开源代码",
+      "comment": "Web开发者的必备服务器工具",
       "tag": "后端服务",
       "quickstart": ""
     },
@@ -178,33 +119,88 @@
       "fullName": "openvinotoolkit/openvino",
       "desc": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
       "lang": "C++",
-      "stars": 11366,
-      "todayStars": 24,
-      "zhDesc": "开源AI推理优化部署工具包",
+      "stars": 11568,
+      "todayStars": 246,
+      "zhDesc": "优化和部署AI推理的开源工具包",
       "comment": "适合AI模型部署优化的工程师",
       "tag": "数据与工具",
       "quickstart": ""
     },
     {
-      "fullName": "obra/superpowers",
-      "desc": "An agentic skills framework & software development methodology that works.",
-      "lang": "Shell",
-      "stars": 321413,
-      "todayStars": 822,
-      "zhDesc": "实用的智能体技能框架与软件开发方法论",
-      "comment": "适合探索AI辅助开发的新方法",
-      "tag": "智能体框架",
+      "fullName": "cathrynlavery/diagram-design",
+      "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "lang": "HTML",
+      "stars": 68643,
+      "todayStars": 271,
+      "zhDesc": "支持45种图表类型的编辑级图表设计工具",
+      "comment": "适合需要高质量图表的开发者和设计师",
+      "tag": "前端开发",
       "quickstart": ""
     },
     {
-      "fullName": "affaan-m/ECC",
-      "desc": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "lang": "JavaScript",
-      "stars": 306642,
-      "todayStars": 1108,
-      "zhDesc": "AI编码助手性能优化系统，增强多种工具能力",
-      "comment": "适合提升AI编程助手效率的开发者",
-      "tag": "编码助手",
+      "fullName": "mvanhorn/last30days-skill",
+      "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "lang": "Python",
+      "stars": 70810,
+      "todayStars": 954,
+      "zhDesc": "跨多平台研究主题并生成综合摘要的AI技能",
+      "comment": "适合需要快速了解热点话题的研究人员",
+      "tag": "AI/Agent",
+      "quickstart": ""
+    },
+    {
+      "fullName": "google-labs-code/stitch-skills",
+      "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "lang": "TypeScript",
+      "stars": 10722,
+      "todayStars": 302,
+      "zhDesc": "兼容多种编码代理的Agent技能库",
+      "comment": "适合使用Stitch MCP服务器的开发者",
+      "tag": "插件与Skills",
+      "quickstart": ""
+    },
+    {
+      "fullName": "mjmirza/app-store-compliance",
+      "desc": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "lang": "Shell",
+      "stars": 1857,
+      "todayStars": 377,
+      "zhDesc": "避免应用商店审核被拒的开源指南和检查工具",
+      "comment": "适合移动应用开发者和发布者",
+      "tag": "移动开发",
+      "quickstart": ""
+    },
+    {
+      "fullName": "Tracer-Cloud/opensre",
+      "desc": "The open-source agent for CI/CD reliability.",
+      "lang": "Python",
+      "stars": 13137,
+      "todayStars": 38,
+      "zhDesc": "提升CI/CD可靠性的开源智能体工具",
+      "comment": "适合DevOps工程师和CI/CD优化者",
+      "tag": "DevOps工具",
+      "quickstart": ""
+    },
+    {
+      "fullName": "toeverything/AFFiNE",
+      "desc": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+      "lang": "TypeScript",
+      "stars": 75183,
+      "todayStars": 182,
+      "zhDesc": "隐私优先的新一代知识管理平台，整合规划与创作",
+      "comment": "适合需要替代Notion和Miro的用户",
+      "tag": "前端开发",
+      "quickstart": ""
+    },
+    {
+      "fullName": "XiaoYouChR/Ghost-Downloader-3",
+      "desc": "The only downloader you need. 下载器的集大成者。",
+      "lang": "Python",
+      "stars": 12742,
+      "todayStars": 341,
+      "zhDesc": "一站式多功能下载工具，支持多种协议和平台",
+      "comment": "适合需要高效下载各种资源的用户",
+      "tag": "数据与工具",
       "quickstart": ""
     }
   ]
